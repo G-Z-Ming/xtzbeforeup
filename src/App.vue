@@ -1,21 +1,24 @@
 <template>
   <div id="app">
     <el-container class="is-vertical">
-      <Header v-if="$route.path!='/login'"></Header>
+      <Header></Header>
       <transition  name="fade">
         <router-view  class="mainWarp"></router-view>
       </transition>
+      <Footer></Footer>
     </el-container>
 
   </div>
 </template>
 
 <script>
-  import Header from "./header/header"
+  import Header from "./common/header/index"
+  import Footer from "./common/footer/index"
   export default {
     name: 'App',
     components:{
-      Header
+      Header,
+      Footer
     },
 
   }

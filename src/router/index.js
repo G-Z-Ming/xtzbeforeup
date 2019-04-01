@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Login from '@/components/login' //登录页
-import Home from '@/components/home' //首页
-import Company from '@/components/company' // 企业
-import School from '@/components/school' //院校
-import Identification from '@/components/identification' // 认证
+import Login from '@/components/login/index' //登录页
+import Home from '@/components/home/index' //首页
+import Company from '@/components/company/index' // 企业
+import School from '@/components/school/index' //院校
+import Identification from '@/components/identification/index' // 认证
 Vue.use(Router)
 let router =  new Router({
   routes: [
@@ -15,7 +15,7 @@ let router =  new Router({
     {
       path: '/login',
       name: 'Login',
-      component: Login
+      component: Login,
     },
     {
       path: '/home',
