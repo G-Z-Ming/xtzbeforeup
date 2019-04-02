@@ -178,9 +178,10 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
+<!-- ZhengMing first submission and home -->
 <style scoped lang="less">
 nav {
-  padding-bottom: 150px;
+  // padding-bottom: 150px;
   .nav-Top {
     height: 700px;
     background-image: url(../img/底图.png);

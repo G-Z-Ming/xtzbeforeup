@@ -1,24 +1,25 @@
 <template>
   <div class="header">
     <div class="he_title">
-      <div class="system"><img
-          src="../img/logo.png"
-          alt=""
-        ></div>
+      <div class="system">
+        <img src="../img/logo.png" alt>
+      </div>
       <div class="tetle">
         <div
           v-for="(item,index) in roudata"
           :key="item.name"
           @click="gotos(item,index)"
           :class="{ active:index==current}"
-        ><a>{{item.name}}</a> </div>
+        >
+          <a>{{item.name}}</a>
+        </div>
       </div>
-      <div
-        class="login"
-      ><a href="http://localhost:8081"><img
-            src="../img/log.png"
-            alt=""
-          > <span>登录</span> </a></div>
+      <div class="login">
+        <a href="http://localhost:8081">
+          <img src="../img/log.png" alt>
+          <span>登录</span>
+        </a>
+      </div>
     </div>
 
     <router-view></router-view>
@@ -33,7 +34,7 @@
 <script>
 export default {
   name: "header",
-  data () {
+  data() {
     return {
       current: 0,
       roudata: [
@@ -44,31 +45,31 @@ export default {
       ]
     };
   },
-  mounted () {
+  mounted() {
     // this.$router.push({
     //   path: "/index"
     // });
   },
   methods: {
-    gotos (item, index) {
+    gotos(item, index) {
       this.$router.push({
         path: item.goto
       });
       this.current = index;
-    },
-   
+    }
   }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
+<!-- ZhengMing first submission and header -->
 <style lang="less" scoped>
 .header {
   min-height: 100vh;
-  padding-bottom: -150px;
+  // padding-bottom: -150px;
   .he_tupo {
-    position: fixed;
-    bottom: 0px;
+    // position: fixed;
+    // bottom: 0px;
     height: 150px;
     width: 100vw;
     background: #454545;
@@ -112,13 +113,18 @@ export default {
     }
     .login {
       position: absolute;
-      right: 360px;
+      right: 300px;
       width: 100px;
       height: 38px;
       background: #00aaff;
       line-height: 38px;
       top: 18px;
       padding-left: 6px;
+      a {
+        font-weight: 600;
+        color: #fff;
+        text-decoration: none;
+      }
       img {
         display: block;
         position: absolute;
