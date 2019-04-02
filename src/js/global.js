@@ -1,3 +1,3 @@
 export default{
-    baseUrl:"https://some-domain.com/"
+    baseUrl:"124.172.243.65:8096/"
 }
