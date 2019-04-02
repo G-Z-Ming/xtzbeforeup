@@ -4,7 +4,12 @@
     name:"school",
     data(){
       return{
-          text: '学校'
+           // 行业类型
+      typeindustry: [],
+      // 地区
+      typeadd: [],
+      // 列表
+      enterLIST: []
       }
     },
     template,

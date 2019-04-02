@@ -4,7 +4,11 @@
     name: 'login',
     data(){
       return{
-          name: '12312'
+        labelPosition: 'right',
+        formLabelAlign: {
+          username: '',
+          password: ''
+        }
       }
     },
     template,
