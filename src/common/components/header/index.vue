@@ -1,7 +1,7 @@
 <script>
   import template from './template.template';
 export default {
-  name: "header",
+  name: "CommonHeader",
   data () {
     return {
       current: 0,
@@ -37,6 +37,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
-@import "./style.less";
+@import "style.less";
 </style>
 

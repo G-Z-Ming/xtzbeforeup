@@ -1,0 +1,37 @@
+<!-- 公共头部 -->
+<div class="header">
+  <div class="headerBanner">
+    <div class="container clearfix">
+      <!-- logo 开始 -->
+      <div class="logo fl">
+      </div>
+      <!-- logo 结束 -->
+
+      <!-- 头部横栏 开始 -->
+      <ul class="items fl">
+        <li
+          v-for="(item,index) in roudata"
+          :key="item.name"
+          @click.prevent="gotos(item,index)"
+          :class="{ active:index==current}"
+        >
+          <i>{{item.name}}</i>
+        </li>
+      </ul>
+      <!-- 头部横栏 结束 -->
+
+      <!-- 登陆按钮 开始 -->
+      <div
+        class="login fr"
+        @click.prevent="gotoLogin"
+      >
+        <i class="loginIcon"></i>
+        <span>登录</span>
+      </div>
+      <!-- 登陆按钮 结束 -->
+    </div>
+  </div>
+
+  <router-view></router-view>
+
+</div>

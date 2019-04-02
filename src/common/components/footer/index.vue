@@ -1,7 +1,7 @@
 <script>
 import template from './template.template';
 export default{
-  name: 'footer',
+  name: 'CommonFooter',
   data(){
     return{
 
@@ -14,5 +14,5 @@ export default{
 }
 </script>
 <style lang="less" scoped>
-@import './style.less';
+@import 'style.less';
 </style>
