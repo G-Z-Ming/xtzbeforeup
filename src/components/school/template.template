@@ -1,34 +1,18 @@
 <div class="school">
-     <!-- 图 -->
-    <div class="plateTop">
-      <img
-        src="../../img/plate1.png"
-        alt=""
-      >
-    </div>
-
     <!-- 分类 -->
-    <div class="fied">
+    <div class="container">
       <div class="types">
-
         <div class="typeTop">
-          <div>
-
-            行业类型：
-            <span>全部</span>
-            <span
-              v-for="(item,index) in typeindustry"
-              :key="index"
-            >{{item.baseName}}</span>
-          </div>
-          <div>
-            地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;区 ：
-            <span>全部</span>
-            <span
-              v-for="(item,index) in typeadd"
-              :key="index"
-            >{{item.baseName}}</span>
-          </div>
+          <AreaSelection
+            :title = "typeIndustryTitle"
+            :dataArr = "typeIndustry"
+          >
+          </AreaSelection>
+          <AreaSelection
+            :title = "typeaddTitle"
+            :dataArr = "typeAdd"
+          >
+          </AreaSelection>
         </div>
         <div class="typeBot">
           <div class="bot-Lef">
@@ -49,9 +33,7 @@
             </form>
           </div>
         </div>
-
       </div>
-
       <div class="LIST">
         <div
           class="LS"
@@ -89,21 +71,20 @@
           </div>
         </div>
 
-      </div>
-
-      <div class="block">
-        <div>
-          <el-pagination
-            @size-change="handleSizeChange"
-            @current-change="handleCurrentChange"
-            :current-page.sync="currentPage3"
-            :page-size="100"
-            layout="prev, pager, next, jumper"
-            :total="1000"
-          >
-          </el-pagination>
-        </div>
-      </div>
+      <!--</div>-->
+      <!--<div class="block">-->
+        <!--<div>-->
+          <!--<el-pagination-->
+            <!--@size-change="handleSizeChange"-->
+            <!--@current-change="handleCurrentChange"-->
+            <!--:current-page.sync="currentPage3"-->
+            <!--:page-size="100"-->
+            <!--layout="prev, pager, next, jumper"-->
+            <!--:total="1000"-->
+          <!--&gt;-->
+          <!--</el-pagination>-->
+        <!--</div>-->
+      <!--</div>-->
     </div>
 
 </div>

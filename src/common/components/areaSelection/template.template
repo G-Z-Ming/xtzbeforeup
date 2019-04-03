@@ -1,0 +1,12 @@
+<div class="areaSelection">
+  <span v-html="title"></span>：
+  <a
+    href="#"
+    v-for="(item,index) in dataArr"
+    :key="index"
+    :class="{active: index === activeIndex}"
+    @click.prevent = "itemClick(index)"
+  >
+    {{item.baseName}}
+  </a>
+</div>
