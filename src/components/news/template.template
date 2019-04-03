@@ -1,0 +1,38 @@
+<div class="news">
+    <div class="zm-wrap">
+        <div class="news-header">
+            <i class="el-icon-location"></i>
+            <span class="head-title">新闻报道：</span>
+            <el-breadcrumb separator-class="el-icon-arrow-right">
+                <el-breadcrumb-item :to="{ path: '/' }">全部</el-breadcrumb-item>
+                <el-breadcrumb-item>企业重大事项</el-breadcrumb-item>
+                <el-breadcrumb-item>学校重大事项</el-breadcrumb-item>
+            </el-breadcrumb>
+        </div>
+        <div class="news-bodyer">
+            <div class="body-content">
+                <el-container>
+                    <el-aside width="186px">
+                        <img src="../../img/banner.png" alt="">
+                    </el-aside>
+                    <el-main>
+                        <div class="content-main-title">
+                            <p class="zm-title-text">11月职教展活动 | 展风采，打造智慧供应链人才培养新平台</p>
+                        </div>
+                        <div class="content-main-body">
+                            <p class="zm-body-text">11月11-12日，全国高职高专校长联席会议2017年年会在江苏常州西太湖国际博览中心召开。会议以“认真学习宣传贯彻党的十九大精神，完善职业教育和培训体系，深化产教融合、校企合作，推进中国特色高等职业教育再创辉煌”为主题...</p>
+                        </div>
+                        <div class="content-main-date">
+                            <i class="el-icon-time"></i>
+                            <p class="zm-date-text">2019-04-03</p>
+                        </div>
+                    </el-main>
+                </el-container>
+            </div>
+        </div>
+        <div class="news-footer">
+            <el-pagination background layout="prev, pager, next" :total="1000">
+            </el-pagination>
+        </div>
+    </div>
+</div>

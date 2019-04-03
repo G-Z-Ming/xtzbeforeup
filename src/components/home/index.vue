@@ -35,7 +35,7 @@
             content:'供应链管理从业能力水平认证专家研讨大大大大大大大大大大大的',
             date: '2019-03-30'
           }
-        ]
+        ],
       };
     },
     template,
@@ -76,7 +76,12 @@
         //   .then(res => {
         //     this.JNheadline = res.data.data
         //   })
-      }
+      },
+      gotoNews(){
+      this.$router.push({
+        path: "/news"
+      });
+    }
     },
   }
 </script>
