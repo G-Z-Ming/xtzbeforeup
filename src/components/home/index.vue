@@ -78,6 +78,17 @@
         //   })
       }
     },
+    created() {
+      // get请求
+      this.$ajax.get('/xtz/portal/baseTypes').then(rsp=>{
+        console.log(rsp,'rsp');
+      });
+      // get传参请求
+      this.$ajax.get('/xtz/portal/baseInfos',{params:{baseTypeId: '1'}}).then(rsp=>{
+        console.log(rsp,'rsp123');
+      });
+      // post请求
+    }
   }
 </script>
 <style lang="less" scoped>
