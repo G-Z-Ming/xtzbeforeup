@@ -14,7 +14,7 @@
     template,
     methods:{
       sendData(){
-
+        
       }
     },
     create(){
