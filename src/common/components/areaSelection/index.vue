@@ -16,8 +16,9 @@
        * 点击事件
        * @param index
        */
-      itemClick(index){
+      itemClick(index, item){
         this.activeIndex = index;
+        this.$emit('itemEvent', item);
       }
     },
     created() {

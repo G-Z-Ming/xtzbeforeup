@@ -1,90 +1,62 @@
 <div class="school">
-    <!-- 分类 -->
-    <div class="container">
-      <div class="types">
-        <div class="typeTop">
-          <AreaSelection
-            :title = "typeIndustryTitle"
-            :dataArr = "typeIndustry"
-          >
-          </AreaSelection>
-          <AreaSelection
-            :title = "typeaddTitle"
-            :dataArr = "typeAdd"
-          >
-          </AreaSelection>
-        </div>
-        <div class="typeBot">
-          <div class="bot-Lef">
-            <span>默认排序</span><span>|</span><span>最新发布</span>
-          </div>
-          <div class="bot-Rit">
-            <form>
-              认证：
-              <select name="cars">
-                <option value="volvo">全部</option>
-                <option value="saab">已认证</option>
-                <option value="fiat">未认证</option>
-              </select>
-              <div>
-                <input type="text">
-                <button>搜索</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-      <div class="LIST">
-        <div
-          class="LS"
-          v-for="(item,index) in enterLIST"
-          :key="index"
+  <!-- 分类 -->
+  <div class="container">
+    <div class="types">
+      <div class="typeTop">
+        <!-- 行业类型开始 -->
+        <AreaSelection
+          :title="typeIndustryTitle"
+          :dataArr="typeIndustry"
+          @itemEvent="typeIndustryItemClick"
         >
-          <div
-            @click="details(item.id)"
-            class="LS-Top"
-          >
-            <div>
-              <div class="one"></div>
-            </div>
-            <div>
-              <div
-                class="tu clearfix"
-                v-if="item.certificationFlag"
-              ><img
-                  src="../../img/认证.png"
-                  alt=""
-                ></div>
-              <div class="two">{{item.schoolname}}</div>
-              <div class="three">{{item.introduction}}</div>
-            </div>
-          </div>
-          <div class="four">
-            <div>
-              <div>学徒岗位</div>
-              <div>{{item.xtSpecialtyCount}}</div>
-            </div>
-            <div>
-              <div>企业师傅</div>
-              <div>{{item.xtTutorCount}}</div>
-            </div>
-          </div>
-        </div>
+        </AreaSelection>
+        <!-- 行业类型结束 -->
+
+        <!-- 地区开始 -->
+        <AreaSelection
+          :title="typeaddTitle"
+          :dataArr="typeAdd"
+          @itemEvent="typeAddItemClick"
+        >
+        </AreaSelection>
+        <!-- 地区结束 -->
+      </div>
+      <SearchTab
+        :title="filterTitle"
+        :optionList="filterList"
+        :defaultId="filterList[0].id"
+        :searchPlaceholder="'搜索学校名称'"
+        :isShowIdentify="false"
+      >
+      </SearchTab>
+    </div>
+    <div class="LIST">
+      <div
+        class="item"
+        v-for="(item,index) in enterLIST"
+        :key="index"
+      >
+        <ItemBar
+          :item="item"
+        >
+        </ItemBar>
+      </div>
 
       <!--</div>-->
       <!--<div class="block">-->
-        <!--<div>-->
-          <!--<el-pagination-->
-            <!--@size-change="handleSizeChange"-->
-            <!--@current-change="handleCurrentChange"-->
-            <!--:current-page.sync="currentPage3"-->
-            <!--:page-size="100"-->
-            <!--layout="prev, pager, next, jumper"-->
-            <!--:total="1000"-->
-          <!--&gt;-->
-          <!--</el-pagination>-->
-        <!--</div>-->
+      <!--<div>-->
+      <!--<el-pagination-->
+      <!--@size-change="handleSizeChange"-->
+      <!--@current-change="handleCurrentChange"-->
+      <!--:current-page.sync="currentPage3"-->
+      <!--:page-size="100"-->
+      <!--layout="prev, pager, next, jumper"-->
+      <!--:total="1000"-->
+      <!--&gt;-->
+      <!--</el-pagination>-->
+      <!--</div>-->
       <!--</div>-->
     </div>
 
+  </div>
 </div>

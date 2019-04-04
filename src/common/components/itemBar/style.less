@@ -1,0 +1,82 @@
+.itemBar{
+  height: 258px;
+  box-shadow: #84a7a2 8px -3px 14px -6px;
+  padding: 20px;
+  box-sizing: border-box;
+  .LS-Top {
+    position: relative;
+    display: flex;
+    height: 172px;
+    border-bottom: 1px solid #e6e6e6;
+    > div:nth-child(1) {
+      width: 82px;
+      .one {
+        width: 66px;
+        height: 66px;
+        border-radius: 50%;
+        border: 1px solid #e6e6e6;
+      }
+    }
+    > div:nth-child(2) {
+      flex: 1;
+      .tu {
+        height: 18px;
+        width: 100%;
+        background: url("../../../img/identity.png") no-repeat;
+        background-size: cover;
+      }
+      .two {
+        margin-top: 30px;
+        font-size: 18px;
+        height: 38px;
+        line-height: 38px;
+      }
+      .three {
+        height: 70px;
+        padding-top: 14px;
+        color: #cdcdcd;
+        display: -webkit-box;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        word-break: break-all;
+        overflow: hidden;
+        font-size: 14px;
+      }
+    }
+  }
+  .four {
+    height: 69px;
+    display: flex;
+    font-size: 12px;
+    justify-content: space-around;
+    .description {
+      text-align: center;
+      line-height: 35px;
+      padding: 20px;
+      position: relative;
+      &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 20px;
+        background-color: #999999;
+      }
+      &:nth-last-child(1){
+        &::after{
+          display: none;
+        }
+      }
+      > div:nth-child(1) {
+        color: #c0c0c0;
+      }
+      > div:nth-child(2) {
+        font-weight: 600;
+      }
+    }
+  }
+}

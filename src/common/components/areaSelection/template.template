@@ -5,7 +5,7 @@
     v-for="(item,index) in dataArr"
     :key="index"
     :class="{active: index === activeIndex}"
-    @click.prevent = "itemClick(index)"
+    @click.prevent = "itemClick(index, item)"
   >
     {{item.baseName}}
   </a>

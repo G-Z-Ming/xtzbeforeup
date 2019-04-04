@@ -1,0 +1,23 @@
+<script>
+  import template from './template.template';
+  export default{
+    data(){
+      return{
+
+      }
+    },
+    props:{
+      item:{default:()=>{}}
+    },
+    template,
+    methods:{
+      itemClick(){
+
+      }
+    },
+
+  }
+</script>
+<style lang="less" scoped>
+@import './style.less';
+</style>

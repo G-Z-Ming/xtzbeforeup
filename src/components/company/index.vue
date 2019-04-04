@@ -18,6 +18,7 @@ export default {
     this.init()
   },
   methods: {
+
     // 初始化数据
     init () {
       // 类型
