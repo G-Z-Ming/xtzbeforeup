@@ -1,20 +1,14 @@
 <script>
 import template from "./template.template";
 export default {
-  name: "news",
+  name: "newsinfo",
   data() {
     return {
-      text: "新闻列表"
+      text: "新闻内容"
     };
   },
   template,
-  methods: {
-    gotoNewsInfo(){
-      this.$router.push({
-        path: "/home/news/newsinfo"
-      });
-    }
-  }
+  methods: {}
 };
 </script>
 <style lang="less" scoped>

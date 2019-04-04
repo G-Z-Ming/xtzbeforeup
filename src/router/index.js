@@ -5,6 +5,7 @@ import Home from '@/components/home/index' //首页
 import Company from '@/components/company/index' // 企业
 import School from '@/components/school/index' //院校
 import News from '@/components/news/index' //新闻
+import NewsInfo from '@/components/newsinfo/index' //新闻内容
 import Identification from '@/components/identification/index' // 认证
 Vue.use(Router)
 let router = new Router({
@@ -26,6 +27,22 @@ let router = new Router({
                 }
             },
             {
+                path: '/home/news',
+                name: 'News',
+                component: News,
+                meta: {
+                    auth: true
+                }
+            },
+            {
+                path: '/home/news/newsinfo',
+                name: 'NewsInfo',
+                component: NewsInfo,
+                meta: {
+                    auth: true
+                }
+            },
+            {
                 path: '/company',
                 name: 'Company',
                 component: Company,
@@ -41,14 +58,7 @@ let router = new Router({
                     auth: true
                 }
             },
-            {
-                path: '/news',
-                name: 'News',
-                component: News,
-                meta: {
-                    auth: true
-                }
-            },
+
             {
                 path: '/identification',
                 name: 'Identification',
