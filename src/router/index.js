@@ -52,6 +52,14 @@ let router = new Router({
                 }
             },
             {
+              path: '/introduce',
+              name: 'Introduce',
+              component: Introduce,
+              meta: {
+                  auth: true
+              }
+          },
+            {
                 path: '/school',
                 name: 'School',
                 component: School,
@@ -84,51 +92,5 @@ let router = new Router({
       else {
         next();
       }
-<<<<<<< HEAD
-    },
-    {
-      path:'/introduce',
-      name:'Introduce',
-      component:Introduce,
-      meta:{
-        auth:true
-      }
-    },
-    {
-      path: '/school',
-      name: 'School',
-      component: School,
-      meta:{
-        auth:true
-      }
-    },
-    {
-      path: '/identification',
-      name: 'Identification',
-      component: Identification,
-      meta:{
-        auth:true
-      }
-    }
-  ]
-})
-/*router.beforeEach((to, from, next) => {
-  if (to.matched.some(record => record.meta.auth)){  // 判断该路由是否需要登录权限
-    if (localStorage.getItem("token")) {  // 判断当前的token是否存在
-      next();
-    }
-    else {
-      next({
-        path: '/login',
-      })
-    }
-  }
-  else {
-    next();
-  }
-});*/
-export default router
-=======
     });*/
 export default router
->>>>>>> 0d79ce80398e9bdde1d11dfb10357b3ea0525ed8
