@@ -20,7 +20,9 @@
                     <div class="newsColumn">
                         <div class="newsTitle clearfix">
                             <ul class="info fl" v-if="newHeaders.length > 0">
-                                <li class="fl" v-for="(item, index) in newHeaders" :key="index" :class="{active: index === newsActiveIndex}" @click.prevent="exchangeNews(item.id, index)">
+                                <li class="fl" v-for="(item, index) in newHeaders" :key="index"
+                                    :class="{active: index === newsActiveIndex}"
+                                    @click.prevent="exchangeNews(item.id, index)">
                                     {{item.baseDName}}
                                 </li>
                             </ul>
@@ -107,8 +109,4 @@
             </div>
         </div>
     </nav>
-<<<<<<< HEAD
- 
-=======
->>>>>>> 0d79ce80398e9bdde1d11dfb10357b3ea0525ed8
 </div>
