@@ -15,6 +15,11 @@
   "dependencies": {
     "axios": "^0.18.0",
     "element-ui": "^2.7.0",
+<<<<<<< HEAD
+=======
+    "html-loader": "^0.5.5",
+    "jquery": "^1.11.3",
+>>>>>>> 0d79ce80398e9bdde1d11dfb10357b3ea0525ed8
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
     "vue": "^2.5.2",

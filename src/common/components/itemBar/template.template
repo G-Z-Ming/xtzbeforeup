@@ -1,0 +1,29 @@
+<div class="itemBar">
+  <div
+    @click="itemClick(item.id)"
+    class="LS-Top"
+  >
+    <div>
+      <div class="one"></div>
+    </div>
+    <div>
+      <div
+        class="tu clearfix"
+        v-if="+item.certificationFlag"
+      >
+      </div>
+      <div class="two">{{item.schoolname}}</div>
+      <div class="three" v-html="item.introduction"></div>
+    </div>
+  </div>
+  <div class="four">
+    <div
+      class="description"
+      v-for="(value, index) in item.descriptionList"
+      :key="index"
+    >
+      <div>{{value.name}}</div>
+      <div>{{value.count}}</div>
+    </div>
+  </div>
+</div>

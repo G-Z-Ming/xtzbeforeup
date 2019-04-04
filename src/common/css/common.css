@@ -1,0 +1,272 @@
+/*
+* @Author: Administrator
+* @Date:   2017-06-19 20:38:21
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-06-19 20:39:19
+*/
+
+
+/*css 初始化 */
+
+html,
+body,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+div,
+img {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+fieldset,
+img,
+input,
+button {
+  border: none;
+  padding: 0;
+  margin: 0;
+  /*在低版本的ie浏览器里面不支持*/
+  outline-style: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+input {
+  padding-top: 0;
+  padding-bottom: 0;
+  font-family: "Microsoft YaHei", "宋体";
+}
+
+select,
+input {
+  vertical-align: middle;
+}
+
+select,
+input,
+textarea {
+  font-size: 12px;
+  margin: 0;
+}
+
+
+/*禁止手动修改大小*/
+
+textarea {
+  resize: none;
+}
+
+
+/*去掉图片底部默认空白缝隙*/
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+
+/*合并外连线*/
+
+table {
+  /*表格的单元格边框默认是不会重合的，这个属性可以让表格的边框重合在一起，看起来更加细一些*/
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: center;
+}
+
+body {
+  //font: Microsoft YaHei, Verdana, "\5b8b\4f53";
+  /*unitedCode的写法，宋体的写法*/
+  font: 12px "Microsoft YaHei", "宋体";
+  background-color: #fff;
+  min-width: 1200px;
+}
+
+
+/*清除浮动*/
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  clear: both;
+  *zoom: 1;
+}
+
+/* 内容水平垂直居中 */
+.centerShow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  moz-user-select: -moz-none;
+  -moz-user-select: none;
+  -o-user-select:none;
+  -khtml-user-select:none;
+  -webkit-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+
+a:hover {
+  color: #C81623;
+  cursor: pointer;
+}
+a:link, a:visited {
+  color: #333333;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 100%;
+}
+
+s,
+i,
+em {
+  font-style: normal;
+  text-decoration: none;
+}
+
+
+/*公共类*/
+
+.container {
+  /*版心*/
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto !important;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.al {
+  text-align: left;
+}
+
+.ac {
+  text-align: center;
+}
+
+.ar {
+  text-align: right;
+}
+
+.pr {
+  position: relative;
+}
+
+.pa {
+  position: absolute;
+}
+
+.hide {
+  display: none;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.mainWarp{
+  position: absolute;
+  width: 100%;
+  padding:0;
+  top: 80px;
+  left: 0;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+/*css初始化完成*/

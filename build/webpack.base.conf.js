@@ -71,7 +71,15 @@ module.exports = {
 
         loader: "style-loader!css-loader!less-loader"    
 
+<<<<<<< HEAD
     }
+=======
+    },
+      {
+        test: /\.template$/,
+        loaders: ["html-loader"]
+      }
+>>>>>>> 0d79ce80398e9bdde1d11dfb10357b3ea0525ed8
     ]
   },
   node: {

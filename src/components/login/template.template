@@ -1,0 +1,14 @@
+<div class="login">
+  <div class="num">
+  <h3>登录</h3>
+  <el-form :label-position="labelPosition" label-width="80px" :model="formLabelAlign">
+  <el-form-item label="用户名">
+    <el-input v-model="formLabelAlign.username"></el-input>
+  </el-form-item>
+   <el-form-item label="密码" prop="pass">
+    <el-input type="password" v-model="formLabelAlign.password" autocomplete="off"></el-input>
+  </el-form-item>
+  <el-button type="primary">登录</el-button>  
+</el-form>
+  </div>
+</div>
