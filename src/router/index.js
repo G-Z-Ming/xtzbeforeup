@@ -7,6 +7,7 @@ import School from '@/components/school/index' //院校
 import News from '@/components/news/index' //新闻
 import NewsInfo from '@/components/newsinfo/index' //新闻内容
 import Identification from '@/components/identification/index' // 认证
+import Introduce from '@/components/introduce/index' //企业公司
 Vue.use(Router)
 let router = new Router({
         routes: [{
@@ -83,5 +84,51 @@ let router = new Router({
       else {
         next();
       }
+<<<<<<< HEAD
+    },
+    {
+      path:'/introduce',
+      name:'Introduce',
+      component:Introduce,
+      meta:{
+        auth:true
+      }
+    },
+    {
+      path: '/school',
+      name: 'School',
+      component: School,
+      meta:{
+        auth:true
+      }
+    },
+    {
+      path: '/identification',
+      name: 'Identification',
+      component: Identification,
+      meta:{
+        auth:true
+      }
+    }
+  ]
+})
+/*router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.auth)){  // 判断该路由是否需要登录权限
+    if (localStorage.getItem("token")) {  // 判断当前的token是否存在
+      next();
+    }
+    else {
+      next({
+        path: '/login',
+      })
+    }
+  }
+  else {
+    next();
+  }
+});*/
+export default router
+=======
     });*/
 export default router
+>>>>>>> 0d79ce80398e9bdde1d11dfb10357b3ea0525ed8

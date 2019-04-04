@@ -1,0 +1,28 @@
+<div class="introduce">
+  <header>
+    <div class="scale container">
+      <div class="Name">
+        <div class="Name-lft">公司名称</div>
+        <div class="tu"></div>
+      </div>
+      <div class="HY">
+        行业：<span>互联网</span>
+        <div></div> 规模：<span>100-500</span>
+      </div>
+      <div class="portrait"><img src="" alt=""></div>
+    </div>
+  </header>
+<!-- 导航栏 -->
+
+  <!-- 企业介绍 -->
+  <nav v-if="show">
+    <div>企业简介</div>
+    <div></div>
+  </nav>
+
+  <!-- 师傅与学徒 -->
+  <nav class="MENT" v-else>
+
+  </nav>
+
+</div>
