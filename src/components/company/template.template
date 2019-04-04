@@ -63,10 +63,7 @@
                   <div
                     class="tu clearfix"
                     v-if="item.certificationFlag"
-                  ><img
-                      src="../../img/认证.png"
-                      alt=""
-                    ></div>
+                  ></div>
                   <div class="two">{{item.name}}</div>
                   <div class="three">{{item.introduce}}</div>
                 </div>

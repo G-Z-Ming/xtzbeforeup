@@ -5,6 +5,7 @@ import Home from '@/components/home/index' //首页
 import Company from '@/components/company/index' // 企业
 import School from '@/components/school/index' //院校
 import Identification from '@/components/identification/index' // 认证
+import Introduce from '@/components/introduce/index' //企业公司
 Vue.use(Router)
 let router =  new Router({
   routes: [
@@ -29,6 +30,14 @@ let router =  new Router({
       path: '/company',
       name: 'Company',
       component: Company,
+      meta:{
+        auth:true
+      }
+    },
+    {
+      path:'/introduce',
+      name:'Introduce',
+      component:Introduce,
       meta:{
         auth:true
       }

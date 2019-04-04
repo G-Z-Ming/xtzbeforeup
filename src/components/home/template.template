@@ -1,7 +1,7 @@
-<div>
-  <div>
+<div class="home">
+ 
     <!-- 图 -->
-    <div>
+    <div class="">
       <!-- 轮播开始 -->
       <el-carousel :autoplay="false" arrow="never" height="538px">
         <el-carousel-item v-for="item in 4" :key="item">
@@ -22,16 +22,16 @@
               <div class="newsTitle clearfix">
                 <ul class="info fl">
                   <li class="fl" v-for="(item, index) in newHeaders" :key="index"
-                    :class="{active: index === newsActiveIndex}" @click.prevent="exchangeNews(item.id)">
+                    :class="{active: item.id === newsActiveIndex}" @click.prevent="exchangeNews(item.id)">
                     {{item.baseDName}}
                   </li>
                 </ul>
-                <a href="#" target="_blank" class="more fr">更多></a>
+                <router-link to=''>更多></router-link>
               </div>
               <div class="newsContent">
                 <ul class="articleContent">
                   <li v-for="(item, index) in newsDataList" :key="index">
-                    <div target="_blank" title="" href="#" class="clearfix">
+                    <div class="clearfix">
                       <i class="fl">{{item.informationName}}</i>
                       <span class="fr">[<em class="date">{{item.createtime|capitalize}}</em>]</span>
                     </div>
@@ -110,5 +110,5 @@
         </div>
       </div>
     </nav>
-  </div>
+ 
 </div>
