@@ -1,23 +1,26 @@
 <div class="company">
     <div class="plateTop">
-        <img src="../../img/plate1.png" alt="">
+
     </div>
 
-
-    <div class="fied">
+    <div class="fied container">
         <div class="types">
 
             <div class="typeTop">
                 <div>
 
                     行业类型：
-                    <span>全部</span>
-                    <span v-for="(item,index) in typeindustry" :key="index">{{item.baseName}}</span>
+                    <div>全部</div>
+                    <ul>
+                        <li v-for="(item,index) in typeindustry" :key="index">{{item.baseName}}</li>
+                    </ul>
                 </div>
                 <div>
                     地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;区 ：
-                    <span>全部</span>
-                    <span v-for="(item,index) in typeadd" :key="index">{{item.baseName}}</span>
+                    <div>全部</div>
+                    <ul>
+                        <li v-for="(item,index) in typeadd" :key="index">{{item.baseName}}</li>
+                    </ul>
                 </div>
             </div>
             <div class="typeBot">
@@ -27,7 +30,7 @@
                 <div class="bot-Rit">
                     <form>
                         认证：
-                        <select name="cars">
+                        <select>
                 <option value="volvo">全部</option>
                 <option value="saab">已认证</option>
                 <option value="fiat">未认证</option>
@@ -43,32 +46,34 @@
         </div>
 
         <div class="LIST">
-            <div class="LS" v-for="(item,index) in enterLIST" :key="index">
-                <div @click="details(item.id)" class="LS-Top">
-                    <div>
-                        <div class="one"></div>
+            <ul>
+                <li class="LS" v-for="(item,index) in enterLIST" :key="index">
+                    <div @click="details(item.id)" class="LS-Top">
+                        <div>
+                            <div class="one"></div>
+                        </div>
+                        <div>
+                            <div class="tu clearfix" v-if="item.certificationFlag"><img src="../../img/认证.png" alt=""></div>
+                            <div class="two">{{item.name}}</div>
+                            <div class="three">{{item.introduce}}</div>
+                        </div>
                     </div>
-                    <div>
-                        <div class="tu clearfix" v-if="item.certificationFlag"><img src="../../img/认证.png" alt=""></div>
-                        <div class="two">{{item.name}}</div>
-                        <div class="three">{{item.introduce}}</div>
+                    <div class="four">
+                        <div>
+                            <div>学徒岗位</div>
+                            <div>{{item.xtSpecialtyCount}}</div>
+                        </div>
+                        <div>
+                            <div>企业师傅</div>
+                            <div>{{item.xtTutorCount}}</div>
+                        </div>
+                        <div>
+                            <div>企业规模</div>
+                            <div>{{item.businessScale}}</div>
+                        </div>
                     </div>
-                </div>
-                <div class="four">
-                    <div>
-                        <div>学徒岗位</div>
-                        <div>{{item.xtSpecialtyCount}}</div>
-                    </div>
-                    <div>
-                        <div>企业师傅</div>
-                        <div>{{item.xtTutorCount}}</div>
-                    </div>
-                    <div>
-                        <div>企业规模</div>
-                        <div>{{item.businessScale}}</div>
-                    </div>
-                </div>
-            </div>
+                </li>
+            </ul>
 
         </div>
 
