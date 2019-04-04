@@ -30,6 +30,8 @@ export default {
       });
       // 获取新闻类型
       this.$ajax.get('xtz/portal/baseInfos', { params: { baseInfoId: '5', baseTypeId: '1' } }).then(rsp => {
+        // console.log(rsp);
+        
         this.newHeaders = rsp.data.data
       });
       // 获取新闻列表
@@ -55,6 +57,7 @@ export default {
     },
   },
   created () {
+    
     // 调用初始化数据方法
     this.init();
   }
