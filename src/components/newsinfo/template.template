@@ -1,0 +1,19 @@
+<div class="news-info">
+    <div class="zm-wrap">
+        <div class="newsinfo-header">
+            <i class="el-icon-location"></i>
+            <span class="head-title">首页：</span>
+            <el-breadcrumb separator-class="el-icon-arrow-right">
+                <el-breadcrumb-item :to="{ path: '/' }">新闻报道</el-breadcrumb-item>
+                <el-breadcrumb-item>正文</el-breadcrumb-item>
+            </el-breadcrumb>
+        </div>
+        <div class="newsinfo-bodyer">
+            <div class="info-body-title">
+                <p class="info-title-text">【11月浙江基地开业】集优质资源，为智慧供应链人才培养体系保驾护航.集优质资源，为智慧供应链人才培养体系保驾护航.集优质资源，为智慧供应链人才培养体系保驾护航.集优质资源，为智慧供应链人才培养体系保驾护航</p>
+                <p class="info-title-date">发布日期：【2019-04-04 15:00】</p>
+                <div class="info-content-main">文本文本文本文本文本文本文本文本</div>
+            </div>
+        </div>
+    </div>
+</div>

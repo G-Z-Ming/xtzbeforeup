@@ -1,63 +1,45 @@
 <div class="school">
-     <!-- 图 -->
-    <div class="plateTop">
-      <img
-        src="../../img/plate1.png"
-        alt=""
-      >
-    </div>
-
-    <!-- 分类 -->
-    <div class="fied">
-      <div class="types">
-
-        <div class="typeTop">
-          <div>
-
-            行业类型：
-            <span>全部</span>
-            <span
-              v-for="(item,index) in typeindustry"
-              :key="index"
-            >{{item.baseName}}</span>
-          </div>
-          <div>
-            地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;区 ：
-            <span>全部</span>
-            <span
-              v-for="(item,index) in typeadd"
-              :key="index"
-            >{{item.baseName}}</span>
-          </div>
-        </div>
-        <div class="typeBot">
-          <div class="bot-Lef">
-            <span>默认排序</span><span>|</span><span>最新发布</span>
-          </div>
-          <div class="bot-Rit">
-            <form>
-              认证：
-              <select name="cars">
-                <option value="volvo">全部</option>
-                <option value="saab">已认证</option>
-                <option value="fiat">未认证</option>
-              </select>
-              <div>
-                <input type="text">
-                <button>搜索</button>
-              </div>
-            </form>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="LIST">
-        <div
-          class="LS"
-          v-for="(item,index) in enterLIST"
-          :key="index"
+  <!-- 分类 -->
+  <div class="container">
+    <div class="types">
+      <div class="typeTop">
+        <!-- 行业类型开始 -->
+        <AreaSelection
+          :title="typeIndustryTitle"
+          :dataArr="typeIndustry"
+          @itemEvent="typeIndustryItemClick"
         >
+        </AreaSelection>
+        <!-- 行业类型结束 -->
+
+        <!-- 地区开始 -->
+        <AreaSelection
+          :title="typeaddTitle"
+          :dataArr="typeAdd"
+          @itemEvent="typeAddItemClick"
+        >
+        </AreaSelection>
+        <!-- 地区结束 -->
+      </div>
+      <SearchTab
+        :title="filterTitle"
+        :optionList="filterList"
+        :defaultId="filterList[0].id"
+        :searchPlaceholder="'搜索学校名称'"
+        :isShowIdentify="false"
+      >
+      </SearchTab>
+    </div>
+    <div class="LIST">
+      <div
+        class="item"
+        v-for="(item,index) in enterLIST"
+        :key="index"
+      >
+        <ItemBar
+          :item="item"
+        >
+<<<<<<< HEAD
           <div
             @click="details(item.id)"
             class="LS-Top"
@@ -89,21 +71,26 @@
           </div>
         </div>
 
+=======
+        </ItemBar>
+>>>>>>> 0d79ce80398e9bdde1d11dfb10357b3ea0525ed8
       </div>
 
-      <div class="block">
-        <div>
-          <el-pagination
-            @size-change="handleSizeChange"
-            @current-change="handleCurrentChange"
-            :current-page.sync="currentPage3"
-            :page-size="100"
-            layout="prev, pager, next, jumper"
-            :total="1000"
-          >
-          </el-pagination>
-        </div>
-      </div>
+      <!--</div>-->
+      <!--<div class="block">-->
+      <!--<div>-->
+      <!--<el-pagination-->
+      <!--@size-change="handleSizeChange"-->
+      <!--@current-change="handleCurrentChange"-->
+      <!--:current-page.sync="currentPage3"-->
+      <!--:page-size="100"-->
+      <!--layout="prev, pager, next, jumper"-->
+      <!--:total="1000"-->
+      <!--&gt;-->
+      <!--</el-pagination>-->
+      <!--</div>-->
+      <!--</div>-->
     </div>
 
+  </div>
 </div>
