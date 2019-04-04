@@ -7,15 +7,9 @@ export default {
       // 师资培训
       teachersList: [],
       JNheadline: [],
-<<<<<<< HEAD
-      newHeaders: [
-      ],
-      newsActiveIndex: '1',
-=======
       newHeaders: [],
       // 新闻tab切换用的index
       newsActiveIndex: 0,
->>>>>>> 0d79ce80398e9bdde1d11dfb10357b3ea0525ed8
       // 新闻
       newsDataList: [],
       // 存储新闻的对象
@@ -37,27 +31,6 @@ export default {
         this.newHeaders = rsp.data.data
       });
       // 获取新闻列表
-<<<<<<< HEAD
-      this.$ajax.get('xtz/portal/informations', { params: { pageNum: '1', pageSize: '5', typeDId: '1', typeId: '5' } }).then(rsp => {
-        this.newsDataList = rsp.data.data
-      });
-      // 获取师资培训列表
-      this.$ajax.get('xtz/portal/informations', { params: { pageNum: '1', pageSize: '5', typeId: '7' } }).then(rsp => {
-        this.teachersList = rsp.data.data
-      });
-    },
-    /**
-    * 新闻报道的title点击事件
-    * @param id id
-    */
-    exchangeNews (id) {
-      this.newsActiveIndex = id
-      this.$ajax.get('xtz/portal/informations', { params: { pageNum: '1', pageSize: '5', typeDId: index, typeId: '5' } }).then(rsp => {
-        
-        this.newsDataList = rsp.data.data
-      });
-
-=======
       this.exchangeNews('1', 0);
       // 获取师资培训列表
       this.$ajax.get('xtz/portal/informations', { params: { pageNum: '1', pageSize: '5', typeId: '7' } }).then(rsp => {
@@ -103,7 +76,6 @@ export default {
       this.$router.push({
         path: "/home/news"
       });
->>>>>>> 0d79ce80398e9bdde1d11dfb10357b3ea0525ed8
     },
   },
   created () {
