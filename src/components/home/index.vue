@@ -73,6 +73,11 @@ export default {
         });
       }
     },
+    gotoNews(){
+      this.$router.push({
+        path: "/home/news"
+      });
+    },
   },
   created () {
     // 调用初始化数据方法
