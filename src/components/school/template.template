@@ -1,62 +1,70 @@
 <div class="school">
-  <!-- 分类 -->
-  <div class="container">
-    <div class="types">
-      <div class="typeTop">
-        <!-- 行业类型开始 -->
-        <AreaSelection
-          :title="typeIndustryTitle"
-          :dataArr="typeIndustry"
-          @itemEvent="typeIndustryItemClick"
-        >
-        </AreaSelection>
-        <!-- 行业类型结束 -->
+  <!-- 头部开始 -->
+  <div class="topMask">
+    <div class="container pr">
+      <div class="types">
+        <div class="typeShadowBox">
+          <div class="typeTop">
+            <!-- 行业类型开始 -->
+            <AreaSelection
+              :title="typeaddTitle"
+              :dataArr="typeAdd"
+              @itemEvent="typeAddItemClick"
+            >
+            </AreaSelection>
+            <!-- 行业类型结束 -->
 
-        <!-- 地区开始 -->
-        <AreaSelection
-          :title="typeaddTitle"
-          :dataArr="typeAdd"
-          @itemEvent="typeAddItemClick"
-        >
-        </AreaSelection>
-        <!-- 地区结束 -->
+            <!-- 地区开始 -->
+            <AreaSelection
+              :title="typeIndustryTitle"
+              :dataArr="typeIndustry"
+              @itemEvent="typeIndustryItemClick"
+            >
+            </AreaSelection>
+            <!-- 地区结束 -->
+          </div>
+          <!-- 搜索框和排序开始 -->
+          <SearchTab
+            :searchPlaceholder="'搜索学校名称'"
+            :isShowIdentify="false"
+            :latest="latest"
+            @handleOrder="handleOrder"
+            @handleSearchName="handleSearchName"
+          >
+          </SearchTab>
+          <!-- 搜索框和排序结束 -->
+        </div>
       </div>
-      <SearchTab
-        :title="filterTitle"
-        :optionList="filterList"
-        :defaultId="filterList[0].id"
-        :searchPlaceholder="'搜索学校名称'"
-        :isShowIdentify="false"
-      >
-      </SearchTab>
     </div>
-    <div class="LIST">
+  </div>
+  <!-- 头部结束 -->
+
+  <!-- 内容开始 -->
+  <div class="container">
+    <!-- 学校列表开始 -->
+    <div class="schoolList">
       <div
         class="item"
         v-for="(item,index) in enterLIST"
         :key="index"
       >
-        <ItemBar
-          :item="item"
-        >
-        </ItemBar>
+        <ItemBar :item="item"></ItemBar>
       </div>
-
-      <!--</div>-->
-      <!--<div class="block">-->
-      <!--<div>-->
-      <!--<el-pagination-->
-      <!--@size-change="handleSizeChange"-->
-      <!--@current-change="handleCurrentChange"-->
-      <!--:current-page.sync="currentPage3"-->
-      <!--:page-size="100"-->
-      <!--layout="prev, pager, next, jumper"-->
-      <!--:total="1000"-->
-      <!--&gt;-->
-      <!--</el-pagination>-->
-      <!--</div>-->
-      <!--</div>-->
+      <!-- 学校列表结束 -->
     </div>
-
+    <div class="block" v-if="totalCount > 6">
+      <el-pagination
+        @current-change="handleCurrentChange"
+        @prev-click="handleCurrentChange"
+        @next-click="handleCurrentChange"
+        :page-size="pageSize"
+        layout="prev, pager, next, total, jumper"
+        :pager-count="7"
+        background
+        :total="totalCount"
+      >
+      </el-pagination>
+    </div>
   </div>
+  <!-- 内容结束 -->
 </div>

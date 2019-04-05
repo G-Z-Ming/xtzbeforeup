@@ -1,12 +1,14 @@
-<div class="areaSelection">
-  <span v-html="title"></span>：
-  <a
-    href="#"
-    v-for="(item,index) in dataArr"
-    :key="index"
-    :class="{active: index === activeIndex}"
-    @click.prevent = "itemClick(index, item)"
-  >
-    {{item.baseName}}
-  </a>
+<div class="areaSelection clearfix">
+  <span class="fl"><i v-html="title"></i>：</span>
+  <div class="areas fl">
+    <a
+      href="#"
+      v-for="(item,index) in dataArr"
+      :key="index"
+      :class="[{active: index === activeIndex}, 'fl']"
+      @click.prevent = "itemClick(index, item)"
+    >
+      {{item.baseName}}
+    </a>
+  </div>
 </div>

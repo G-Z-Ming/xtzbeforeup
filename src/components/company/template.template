@@ -1,88 +1,73 @@
-<div class="company">
-    <div class="plateTop">
+<div class="school">
+  <!-- 头部开始 -->
+  <div class="topMask">
+    <div class="container pr">
+      <div class="types">
+        <div class="typeShadowBox">
+          <div class="typeTop">
+            <!-- 行业类型开始 -->
+            <AreaSelection
+              :title="typeIndustryTitle"
+              :dataArr="typeIndustry"
+              @itemEvent="typeIndustryItemClick"
+            >
+            </AreaSelection>
+            <!-- 行业类型结束 -->
 
+            <!-- 地区开始 -->
+            <AreaSelection
+              :title="typeaddTitle"
+              :dataArr="typeAdd"
+              @itemEvent="typeAddItemClick"
+            >
+            </AreaSelection>
+            <!-- 地区结束 -->
+          </div>
+          <!-- 搜索框和排序开始 -->
+          <SearchTab
+            :title="filterTitle"
+            :optionList="filterList"
+            :defaultId="filterList[0].id"
+            :searchPlaceholder="'搜索企业名称'"
+            :latest="latest"
+            @handleOrder="handleOrder"
+            @handleSearchName="handleSearchName"
+            @handleIdentify="handleIdentify"
+          >
+          </SearchTab>
+          <!-- 搜索框和排序结束 -->
+        </div>
+      </div>
     </div>
+  </div>
+  <!-- 头部结束 -->
 
-    <div class="fied container">
-        <div class="types">
-
-            <div class="typeTop">
-                <div>
-
-                    行业类型：
-                    <div>全部</div>
-                    <ul>
-                        <li v-for="(item,index) in typeindustry" :key="index">{{item.baseName}}</li>
-                    </ul>
-                </div>
-                <div>
-                    地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;区 ：
-                    <div>全部</div>
-                    <ul>
-                        <li v-for="(item,index) in typeadd" :key="index">{{item.baseName}}</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="typeBot">
-                <div class="bot-Lef">
-                    <span>默认排序</span><span>|</span><span>最新发布</span>
-                </div>
-                <div class="bot-Rit">
-                    <form>
-                        认证：
-                        <select>
-                <option value="volvo">全部</option>
-                <option value="saab">已认证</option>
-                <option value="fiat">未认证</option>
-              </select>
-                        <div>
-                            <input type="text">
-                            <button>搜索</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="LIST">
-            <ul>
-                <li class="LS" v-for="(item,index) in enterLIST" :key="index">
-                    <div @click="details(item.id)" class="LS-Top">
-                        <div>
-                            <div class="one"></div>
-                        </div>
-                        <div>
-                            <!-- <div class="tu clearfix" v-if="item.certificationFlag"><img src="../../img/认证.png" alt=""></div> -->
-                            <div class="two">{{item.name}}</div>
-                            <div class="three">{{item.introduce}}</div>
-                        </div>
-                    </div>
-                    <div class="four">
-                        <div>
-                            <div>学徒岗位</div>
-                            <div>{{item.xtSpecialtyCount}}</div>
-                        </div>
-                        <div>
-                            <div>企业师傅</div>
-                            <div>{{item.xtTutorCount}}</div>
-                        </div>
-                        <div>
-                            <div>企业规模</div>
-                            <div>{{item.businessScale}}</div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-
-        </div>
-
-        <div class="block">
-            <div>
-                <el-pagination @size-change="handleSizeChange" @current-change="handleCurrentChange" :current-page.sync="currentPage3" :page-size="100" layout="prev, pager, next, jumper" :total="1000">
-                </el-pagination>
-            </div>
-        </div>
+  <!-- 内容开始 -->
+  <div class="container">
+    <!-- 学校列表开始 -->
+    <div class="schoolList">
+      <div
+        class="item"
+        v-for="(item,index) in enterLIST"
+        :key="index"
+      >
+        <ItemBar :item="item"></ItemBar>
+      </div>
+      <!-- 学校列表结束 -->
     </div>
-
+    <div class="block" v-if="totalCount > 6">
+      <el-pagination
+        @current-change="handleCurrentChange"
+        @prev-click="handleCurrentChange"
+        @next-click="handleCurrentChange"
+        :page-size="pageSize"
+        layout="prev, pager, next, total, jumper"
+        :pager-count="7"
+        background
+        :total="totalCount"
+      >
+      </el-pagination>
+    </div>
+  </div>
+  <!-- 内容结束 -->
 </div>

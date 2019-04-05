@@ -1,28 +1,27 @@
 <div class="itemBar" @click="itemClick(item.id)">
-  <div
-    class="LS-Top"
-  >
-    <div>
-      <div class="one" ></div>
-    </div>
-    <div>
-      <div
-        class="tu clearfix"
-        v-if="+item.certificationFlag"
-      >
+  <div class="itemShadowBox">
+    <div class="LS-Top">
+      <div>
+        <div class="one" :style="{backgroundImage: 'url('+item.picture+')'}"></div>
       </div>
-      <div class="two">{{item.schoolname}}</div>
-      <div class="three" v-html="item.introduction"></div>
+      <div>
+        <div
+          class="tu clearfix"
+          v-if="+item.certificationFlag"
+        >
+        </div>
+        <div class="two">{{item.name}}</div>
+        <div class="three" v-html="item.introduction"></div>
+      </div>
     </div>
-  </div>
-  <div class="four">
-    <div
-      class="description"
-      v-for="(value, index) in item.descriptionList"
-      :key="index"
-    >
-      <div>{{value.name}}</div>
-      <div>{{value.count}}</div>
+    <div class="four">
+      <div
+        class="description"
+        v-for="(value, index) in item.descriptionList"
+        :key="index"
+      >
+        {{value.name}} <span>{{value.count}}</span>
+      </div>
     </div>
   </div>
 </div>

@@ -1,6 +1,8 @@
 <div class="typeBot">
   <div class="bot-Lef">
-    <span>默认排序</span><span>|</span><span>最新发布</span>
+    <a href="#" :class="{active: !latest}" @click.prevent="orderClick(false)">默认排序</a>
+    <a href="#">|</a>
+    <a href="#" :class="{active: latest}" @click.prevent="orderClick(true)">最新发布</a>
   </div>
   <div class="bot-Rit clearfix">
     <div class="filter fl" v-if="isShowIdentify">
@@ -23,7 +25,7 @@
       </div>
     </div>
     <div class="search fl">
-      <input class="searchInput fl" :placeholder="searchPlaceholder" type="text">
+      <input class="searchInput fl" :placeholder="searchPlaceholder" v-model="schoolName" type="text">
       <a href="#" @click.prevent="searchClick" class="searchText fl">搜索</a>
     </div>
   </div>

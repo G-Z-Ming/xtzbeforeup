@@ -9,15 +9,16 @@
         text: '全部',
         isFold: false,     // 是否展开
         collapse,
-        expend
+        expend,
+        schoolName: ''    // 需要搜索的学校名称
       }
     },
     // 可配置项
     props: {
       // select控件的前面文字
       title: '',
-      // select的list
-      optionList: {default: [{name: '全部', id: '0'}, {name: '已认证', id: '1'}, {name: '未认证', id: '2'}]},
+      // 验证select控件的的list
+      optionList: {default: ()=>[{name: '全部', id: '0'}, {name: '已认证', id: '1'}, {name: '未认证', id: '2'}]},
       // 可定义的默认展示select控件的前面文字
       selectText: {default: ''},
       // 搜索框的placeholder
@@ -29,27 +30,38 @@
       // 可配置的关闭时select控件的右边小图标
       closeIcon: {default: ''},
       // 是否展示认证筛选
-      isShowIdentify:{default: true}
+      isShowIdentify:{default: true},
+      // 排序规则
+      latest: {default: true}
     },
     template,
     methods: {
       /**
-       * 点击展开与收起选项栏
+       * 点击展开与收起验证选项栏
        */
       tabClick() {
         this.isFold = !this.isFold;
       },
       /**
-       * 子项的点击事件
+       * 验证框子项的点击事件
        * @param val
        */
       itemClick(val) {
         this.isFold = false;
         this.text = val.name;
-        // this.$emit('transfer', val);
+        this.$emit('handleIdentify', val);
       },
+      /**
+       * 搜索点击
+       */
       searchClick(){
-
+        this.$emit('handleSearchName', this.schoolName)
+      },
+      /**
+       * 规则点击
+       */
+      orderClick(flag){
+        this.$emit('handleOrder', flag)
       }
     },
     mounted(){

@@ -268,5 +268,9 @@ table {
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
+.number, .el-input__inner, .btn-next{
+  width: 42px;
+  height: 42px;
+}
 
 /*css初始化完成*/

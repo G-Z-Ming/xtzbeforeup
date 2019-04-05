@@ -1,174 +1,47 @@
-.company{
-        background-color: #ffffff;
-        .plateTop {
+.school{
+  background-color: #fff;
+  .topMask{
+    height: 345px;
+    background-image: url(../../img/plate1.png);
+    background-size: cover;
+    .types {
+      position: absolute;
+      top: 160px;
+      box-shadow: #f4f4f4 8px -3px 14px -6px; //边框阴影
+      height: 210px;
+      width: 100%;
+      margin: 0 auto;
+      border-radius: 10px;
+      //overflow: hidden;
+      border:1px solid #f4f4f4;
+      .typeShadowBox{
+        box-shadow: #f4f4f4 -8px 3px 14px -6px; //边框阴影
+        .typeTop {
+          background-color: #f6f6f6;
           width: 100%;
-          height: 348px;
-          background-image: url(../../img/plate1.png);
+          height: 148px;
+          padding: 18px 30px;
+          border-radius: 10px 10px 0 0;
         }
-        .fied {
-          background-color: #ffffff;
-          height: 756px;
-          .types {
-            box-shadow: #84a7a2 8px -3px 14px -6px; //边框阴影
-            height: 210px;
-            margin: 0 auto;
-            border-radius: 10px;
-            position: relative;
-            top: -190px;
-            .typeTop {
-              background-color: #f6f6f6;
-              width: 100%;
-              height: 148px;
-              padding: 18px 30px;
-              border-radius: 10px 10px 0px 0px;
-              > div {
-              display: flex;
-                height: 28px;
-                margin-bottom: 12px;
-                line-height: 28px;
-                div {
-                  margin-right: 24px;
-                  width: 58px;
-                  height: 28px;
-                  background-color: #00aaff;
-                  text-align: center;
-                  color: #ffffff;
-                }
-                ul{
-                  display: flex;
-                  li{
-                    text-align: center;
-                    height: 28px;
-                    padding-right: 20px;
-                  }
-                }
-              }
-            }
-            .typeBot {
-              background-color: #ffffff;
-              color: #c5c3c3;
-              height: 60px;
-              padding: 16px 30px;
-              display: flex;
-              justify-content: space-between;
-              .bot-Lef {
-                span:nth-child(2) {
-                  margin: 0 12px;
-                  display: inline-block;
-                }
-              }
-              .bot-Rit {
-                position: relative;
-                form {
-                  select {
-                    width: 88px;
-                    height: 25px;
-                    color: #ed6a00;
-                    border: 1px solid #d7d7d7;
-                  }
-                  > div {
-                    display: inline-block;
-                    padding-left: 20px;
-                    input {
-                      width: 243px;
-                      height: 25px;
-                      background-color: #f4f4f4;
-                      border: 1px solid #d7d7d7;
-                    }
-                    button {
-                      width: 56px;
-                      height: 25px;
-                      color: #ffffff;
-                      background-color: #00aaff;
-                      text-align: center;
-                      line-height: 25px;
-                      position: absolute;
-                      top: 0;
-                      right: 0;
-                    }
-                  }
-                }
-              }
-            }
-          }
-          .LIST {
-            margin: -100px auto;
-            ul{
-              display: flex;
-              flex-wrap: wrap;
-            }
-             .LS {
-              width: 31%;
-              height: 258px;
-              box-shadow: #84a7a2 1px 4px 15px -6px;
-              padding: 20px;
-              margin-right: 40px;
-              .LS-Top {
-                cursor: pointer;
-                position: relative;
-                display: flex;
-                height: 172px;
-                border-bottom: 1px solid #e6e6e6;
-                > div:nth-child(1) {
-                  width: 82px;
-                  .one {
-                    width: 66px;
-                    height: 66px;
-                    border-radius: 50%;
-                    border: 1px solid #e6e6e6;
-                  }
-                }
-                > div:nth-child(2) {
-                  .tu {
-                    height: 18px;
-                    width: 46px;
-                    position: absolute;
-                    right: 0;
-                    background-image: url(../../img/authentication.png);
-                  }
-                  .two {
-                    font-size: 18px;
-                    height: 38px;
-                    line-height: 38px;
-                  }
-                  .three {
-                     height: 80px;
-                    padding-top: 14px;
-                    color: #cdcdcd;
-                    display: -webkit-box;
-                    -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 3;
-                    overflow: hidden;
-                    font-size: 12px;
-                  }
-                }
-              }
-              .four {
-                height: 69px;
-                line-height: 69px;
-                display: flex;
-                font-size: 12px;
-                padding-left: 6px;
-                > div {
-                  display: flex;
-                  width: 33%;
-                  > div:nth-child(1) {
-                    color: #c0c0c0;
-                  }
-                  > div:nth-child(2) {
-                    padding-left: 4px;
-                    font-weight: 600;
-                  }
-                }
-              }
-            }
-            .LS:nth-child(3n) {
-              margin-right: 0px;
-            }
-          }
-          .block {
-            margin: 200px auto;
-            text-align: center;
-          }
       }
+
+    }
+  }
+  .schoolList {
+    padding-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    .item{
+      margin-right: 40px;
+      margin-bottom: 40px;
+      width: 31%;
+    }
+    .item:nth-child(3n) {
+      margin-right: 0px;
+    }
+  }
+  .block {
+    margin-bottom: 45px;
+    text-align: center;
+  }
 }

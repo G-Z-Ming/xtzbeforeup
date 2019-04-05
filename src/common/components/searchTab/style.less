@@ -1,13 +1,20 @@
 .typeBot {
-  background-color: #fff;
+  background-color: #ffffff;
   color: #c5c3c3;
   height: 60px;
   padding: 16px 30px;
   line-height: 28px;
   display: flex;
   justify-content: space-between;
+  border-radius: 0 0 10px 10px;
   .bot-Lef {
-    span:nth-child(2) {
+    a{
+      color: #c5c3c3;
+      &.active{
+        color: #387dff;
+      }
+    }
+    a:nth-child(2) {
       margin: 0 12px;
       display: inline-block;
     }
@@ -73,6 +80,7 @@
       .searchInput {
         width: 243px;
         height: 28px;
+        text-indent: 10px;
         background-color: #f4f4f4;
         border: 1px solid #d7d7d7;
         box-sizing: border-box;
