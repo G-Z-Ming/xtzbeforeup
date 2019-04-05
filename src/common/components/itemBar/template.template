@@ -1,10 +1,9 @@
-<div class="itemBar">
+<div class="itemBar" @click="itemClick(item.id)">
   <div
-    @click="itemClick(item.id)"
     class="LS-Top"
   >
     <div>
-      <div class="one"></div>
+      <div class="one" ></div>
     </div>
     <div>
       <div
