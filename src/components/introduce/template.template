@@ -1,4 +1,5 @@
 <div class="introduce">
+  <!-- 头部 -->
   <header>
     <div class="scale container">
       <div class="Name">
@@ -12,17 +13,16 @@
       <div class="portrait"><img src="" alt=""></div>
     </div>
   </header>
-<!-- 导航栏 -->
 
-  <!-- 企业介绍 -->
-  <nav v-if="show">
-    <div>企业简介</div>
-    <div></div>
-  </nav>
+<!-- 导航栏开始 -->
+<nav class="container">
+ <ul class="nav-name">
+   <li :class="{sign:index===signIdex}" v-for="(item,index) in Navigation" :key="index" @click="HereClick(index,item.id,item.path)">{{item.name}}</li>
+ </ul>
+</nav>
+<!-- 导航栏结束 -->
+<router-view></router-view>
 
-  <!-- 师傅与学徒 -->
-  <nav class="MENT" v-else>
 
-  </nav>
-
+  
 </div>
