@@ -51,7 +51,9 @@
         v-for="(item,index) in enterLIST"
         :key="index"
       >
-        <ItemBar :item="item"></ItemBar>
+        <router-link :to="'/introduce/'+item.id">
+          <ItemBar :item="item"></ItemBar>
+        </router-link>
       </div>
       <!-- 学校列表结束 -->
     </div>

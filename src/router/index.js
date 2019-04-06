@@ -8,11 +8,10 @@ import News from '@/components/news/index' //新闻
 import NewsInfo from '@/components/newsinfo/index' //新闻内容
 import Identification from '@/components/identification/index' // 认证
 import Introduce from '@/components/introduce/index' //企业公司
-import Detailed from '@/components/detailed/index' //企业介绍
-import Recruit from '@/components/recruit/index'//招聘需求
-import Master from '@/components/master/index' //企业师傅库
-
-import Position from '@/components/position/index'//职位
+// import Detailed from '@/components/detailed/index' //企业介绍
+// import Recruit from '@/components/recruit/index'//招聘需求
+// import Master from '@/components/master/index' //企业师傅库
+// import Position from '@/components/position/index'//职位
 Vue.use(Router)
 let router = new Router({
     routes: [{
@@ -51,53 +50,38 @@ let router = new Router({
     {
         path: '/company',
         name: 'Company',
-        component: Company,
-        meta: {
-            auth: true
-        }
+        component: Company
     },
     {
-        path: '/introduce',
+        path: '/introduce/:id',
         name: 'Introduce',
         component: Introduce,
-        meta: {
-            auth: true
-        },
         children: [
-            {
-                path: '/detailed',
-                name: 'Detailed',
-                component: Detailed,
-                meta: {
-                    auth: true
-                }
-            },
-            {
-                path: '/recruit',
-                name: 'Recruit',
-                component: Recruit,
-                meta: {
-                    auth: true
-                }
-            },
-            {
-                path: '/master',
-                name: 'Master',
-                component: Master,
-                meta: {
-                    auth: true
-                }
-            }
+            // {
+            //     path: '/detailed',
+            //     name: 'Detailed',
+            //     component: Detailed
+            // },
+            // {
+            //     path: '/recruit',
+            //     name: 'Recruit',
+            //     component: Recruit
+            // },
+            // {
+            //     path: '/master',
+            //     name: 'Master',
+            //     component: Master
+            // }
         ]
     },
-    {
-        path: '/position',
-        name: 'Position',
-        component: Position,
-        meta: {
-            auth: true
-        }
-    },
+    // {
+    //     path: '/position',
+    //     name: 'Position',
+    //     component: Position,
+    //     meta: {
+    //         auth: true
+    //     }
+    // },
     {
         path: '/school',
         name: 'School',

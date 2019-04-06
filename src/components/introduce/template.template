@@ -1,23 +1,25 @@
 <div class="introduce">
   <!-- 头部 -->
-  <header>
-    <div class="scale container">
-      <div class="Name">
-        <div class="Name-lft">公司名称</div>
-        <div class="tu"></div>
-      </div>
-      <div class="HY">
-        行业：<span>互联网</span>
-        <div></div> 规模：<span>100-500</span>
-      </div>
-      <div class="portrait"><img src="" alt=""></div>
-    </div>
-  </header>
+  <IntroduceHeader
+      :name="infoData.name"
+      :picture="infoData.picture"
+      :businessScale="infoData.businessScale"
+      :certificationFlag="infoData.certificationFlag"
+      :baseName="infoData.industryEntity ? infoData.industryEntity.baseName : ''"
+  >
+  </IntroduceHeader>
 
 <!-- 导航栏开始 -->
 <nav class="container">
  <ul class="nav-name">
-   <li :class="{sign:index===signIdex}" v-for="(item,index) in Navigation" :key="index" @click="HereClick(index,item.id,item.path)">{{item.name}}</li>
+   <li
+     :class="{sign:index===signIdex}"
+     v-for="(item,index) in Navigation"
+     :key="index"
+     @click="HereClick(index,item)"
+   >
+     {{item.name}}
+   </li>
  </ul>
 </nav>
 <!-- 导航栏结束 -->

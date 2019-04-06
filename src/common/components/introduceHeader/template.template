@@ -1,0 +1,13 @@
+<header>
+  <div class="scale container">
+    <div class="Name">
+      <div class="Name-lft">{{name}}</div>
+      <div class="tu" v-if="+certificationFlag"></div>
+    </div>
+    <div class="HY">
+      行业：<span>{{baseName}}</span>
+      <div></div> 规模：<span>{{businessScale}}</span>
+    </div>
+    <div class="portrait"><img :src="picture" alt=""></div>
+  </div>
+</header>
