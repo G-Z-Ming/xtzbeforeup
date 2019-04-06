@@ -1,16 +1,25 @@
 <div class="master container">
   <!-- 企业师傅列表开始 -->
-  <nav>
-    <ul class="masterList">
-      <li>
-        <div class="head"><img src="" alt=""></div>
-        <div class="words">
-          <div class="master-Name">名字</div>
-          <div class="department">部门：<span>技术部</span></div>
-          <div class="department">岗位：<span>店长</span></div>
-        </div>
-      </li>
-    </ul>
-  </nav>
+  <ul class="masterList">
+    <li v-for="(item, index) in infoData" :key="index">
+      <masterItem
+        :itemData="item"
+      >
+      </masterItem>
+    </li>
+  </ul>
+  <div class="block" v-if="totalCount > 6">
+    <el-pagination
+      @current-change="handleCurrentChange"
+      @prev-click="handleCurrentChange"
+      @next-click="handleCurrentChange"
+      :page-size="pageSize"
+      layout="prev, pager, next, total, jumper"
+      :pager-count="7"
+      background
+      :total="totalCount"
+    >
+    </el-pagination>
+  </div>
   <!-- 企业师傅列表结束 -->
 </div>

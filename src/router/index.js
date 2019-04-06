@@ -8,98 +8,99 @@ import News from '@/components/news/index' //新闻
 import NewsInfo from '@/components/newsinfo/index' //新闻内容
 import Identification from '@/components/identification/index' // 认证
 import Introduce from '@/components/introduce/index' //企业公司
-// import Detailed from '@/components/detailed/index' //企业介绍
-// import Recruit from '@/components/recruit/index'//招聘需求
-// import Master from '@/components/master/index' //企业师傅库
-// import Position from '@/components/position/index'//职位
+import Detailed from '@/components/detailed/index' //企业介绍
+import Recruit from '@/components/recruit/index'//招聘需求
+import Master from '@/components/master/index' //企业师傅库
+import Position from '@/components/position/index'//职位
 Vue.use(Router)
 let router = new Router({
-    routes: [{
-        path: '/',
-        redirect: 'Home'
+  routes: [{
+    path: '/',
+    redirect: 'Home'
+  },
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login,
     },
     {
-        path: '/login',
-        name: 'Login',
-        component: Login,
+      path: '/home',
+      name: 'Home',
+      component: Home,
+      meta: {
+        auth: true
+      }
     },
     {
-        path: '/home',
-        name: 'Home',
-        component: Home,
-        meta: {
-            auth: true
+      path: '/home/news',
+      name: 'News',
+      component: News,
+      meta: {
+        auth: true
+      }
+    },
+    {
+      path: '/home/news/newsinfo',
+      name: 'NewsInfo',
+      component: NewsInfo,
+      meta: {
+        auth: true
+      }
+    },
+    {
+      path: '/company',
+      name: 'Company',
+      component: Company
+    },
+    {
+      path: '/introduce',
+      name: 'Introduce',
+      component: Introduce,
+      redirect: '/detailed',
+      children: [
+        {
+          path: '/detailed',
+          name: 'Detailed',
+          component: Detailed
+        },
+        {
+          path: '/recruit',
+          name: 'Recruit',
+          component: Recruit
+        },
+        {
+          path: '/master',
+          name: 'Master',
+          component: Master
         }
+      ]
     },
     {
-        path: '/home/news',
-        name: 'News',
-        component: News,
-        meta: {
-            auth: true
-        }
+      path: '/position',
+      name: 'Position',
+      component: Position,
+      meta: {
+        auth: true
+      }
     },
     {
-        path: '/home/news/newsinfo',
-        name: 'NewsInfo',
-        component: NewsInfo,
-        meta: {
-            auth: true
-        }
+      path: '/school',
+      name: 'School',
+      component: School,
+      meta: {
+        auth: true
+      }
     },
     {
-        path: '/company',
-        name: 'Company',
-        component: Company
-    },
-    {
-        path: '/introduce/:id',
-        name: 'Introduce',
-        component: Introduce,
-        children: [
-            // {
-            //     path: '/detailed',
-            //     name: 'Detailed',
-            //     component: Detailed
-            // },
-            // {
-            //     path: '/recruit',
-            //     name: 'Recruit',
-            //     component: Recruit
-            // },
-            // {
-            //     path: '/master',
-            //     name: 'Master',
-            //     component: Master
-            // }
-        ]
-    },
-    // {
-    //     path: '/position',
-    //     name: 'Position',
-    //     component: Position,
-    //     meta: {
-    //         auth: true
-    //     }
-    // },
-    {
-        path: '/school',
-        name: 'School',
-        component: School,
-        meta: {
-            auth: true
-        }
-    },
-    {
-        path: '/identification',
-        name: 'Identification',
-        component: Identification,
-        meta: {
-            auth: true
-        }
+      path: '/identification',
+      name: 'Identification',
+      component: Identification,
+      meta: {
+        auth: true
+      }
     }
 
-    ]
+  ]
 })
 
 /*router.beforeEach((to, from, next) => {

@@ -2,8 +2,8 @@
     <!-- 企业简介开始 -->
  <div class="introduction">
      <i>企业简介</i>
-     <div class="word">
-         nueesbugrbbiu;jrjnbpijrnbknbisjbmxknfihbrbniurnbfnbbbjbnviudsj
+     <div class="word" v-html="introduce">
+
      </div>
  </div>
 <!-- 企业简介结束 -->
@@ -13,7 +13,7 @@
 <div class="address">
     <i>公司地址</i>
     <div class="word">
-        nfjdanivbnsreanbioenbkonb
+        {{address ? address : ''}}
     </div>
 
 </div>

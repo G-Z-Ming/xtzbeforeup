@@ -50,10 +50,9 @@
         class="item"
         v-for="(item,index) in enterLIST"
         :key="index"
+        @click.prevent="changeToRoute(item.id)"
       >
-        <router-link :to="'/introduce/'+item.id">
-          <ItemBar :item="item"></ItemBar>
-        </router-link>
+        <ItemBar :item="item"></ItemBar>
       </div>
       <!-- 学校列表结束 -->
     </div>

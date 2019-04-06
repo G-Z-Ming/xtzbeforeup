@@ -1,30 +1,28 @@
 <div class="introduce">
   <!-- 头部 -->
   <IntroduceHeader
-      :name="infoData.name"
-      :picture="infoData.picture"
-      :businessScale="infoData.businessScale"
-      :certificationFlag="infoData.certificationFlag"
-      :baseName="infoData.industryEntity ? infoData.industryEntity.baseName : ''"
+    :name="infoData.name"
+    :picture="infoData.picture"
+    :businessScale="infoData.businessScale"
+    :certificationFlag="infoData.certificationFlag"
+    :baseName="infoData.industryEntity ? infoData.industryEntity.baseName : ''"
   >
   </IntroduceHeader>
 
-<!-- 导航栏开始 -->
-<nav class="container">
- <ul class="nav-name">
-   <li
-     :class="{sign:index===signIdex}"
-     v-for="(item,index) in Navigation"
-     :key="index"
-     @click="HereClick(index,item)"
-   >
-     {{item.name}}
-   </li>
- </ul>
-</nav>
-<!-- 导航栏结束 -->
-<router-view></router-view>
+  <!-- 导航栏开始 -->
+  <nav class="container">
+    <ul class="nav-name">
+      <li
+        :class="{sign:index===signIdex}"
+        v-for="(item,index) in Navigation"
+        :key="index"
+        @click="HereClick(index,item)"
+      >
+        {{item.name}}
+      </li>
+    </ul>
+  </nav>
 
-
-  
+  <!-- 导航栏结束 -->
+  <router-view></router-view>
 </div>

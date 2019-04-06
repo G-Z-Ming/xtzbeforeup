@@ -116,6 +116,16 @@ export default {
     handleIdentify(item){
       this.certification = item.id;
     },
+    /**
+     *  路由跳转
+     *  @param id  type:string
+     */
+    changeToRoute(id){
+      this.$router.push({
+        path: '/introduce',
+        query: {id}
+      })
+    },
     // 初始化数据
     init () {
       // 类型
