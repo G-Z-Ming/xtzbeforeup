@@ -1,0 +1,16 @@
+<div class="master container">
+  <!-- 企业师傅列表开始 -->
+  <nav>
+    <ul class="masterList">
+      <li>
+        <div class="head"><img src="" alt=""></div>
+        <div class="words">
+          <div class="master-Name">名字</div>
+          <div class="department">部门：<span>技术部</span></div>
+          <div class="department">岗位：<span>店长</span></div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <!-- 企业师傅列表结束 -->
+</div>

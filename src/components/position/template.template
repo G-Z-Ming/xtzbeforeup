@@ -1,0 +1,46 @@
+<div class="position">
+    <!-- 头部 -->
+    <header>
+        <div class="scale container">
+            <div class="position-Lft">
+                <div class="worker">
+                    <div class="worker-lft">零售店长</div>
+                    <div class="price">
+                        100-200元
+                    </div>
+                </div>
+                <div class="HY">
+                    学徒招聘
+                    <div></div> 规模：<span>100-500</span>
+                </div>
+            </div>
+            <div class="position-Rit">
+                <div class="companys">
+                    <div class="worker">
+                        <div class="worker-lft">公司名字</div>
+                        <div class="price">
+                            100-200元
+                        </div>
+                    </div>
+                    <div class="HY">
+                    行业：<span>电子</span>
+                        <div></div> 规模：<span>100-500</span>
+                    </div>
+                </div>
+                <div class="tu">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+
+    <!-- 导航栏开始 -->
+    <nav class="container">
+     <ul class="nav-name">
+       <li :class="{sign:index===signIdex}" v-for="(item,index) in positionNav" :key="index" @click="HereClick(index,item.path)">{{item.name}}</li>
+     </ul>
+    </nav>
+    <!-- 导航栏结束 -->
+</div>
