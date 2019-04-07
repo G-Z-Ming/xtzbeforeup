@@ -11,8 +11,8 @@
         signIdex: 0,
         // 导航
         positionNav: [
-          {name: "职位描述", id: 0, path: ""},
-          {name: "课程体系(培养方案)", id: 1, path: ""},
+          {name: "职位描述", id: 0, path: "/description"},
+          {name: "课程体系(培养方案)", id: 1, path: "/system"},
           {name: "学徒晋升", id: 2, path: ""}
         ]
       };

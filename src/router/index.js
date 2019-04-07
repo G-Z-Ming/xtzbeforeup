@@ -11,7 +11,10 @@ import Introduce from '@/components/introduce/index' //企业公司
 import Detailed from '@/components/detailed/index' //企业介绍
 import Recruit from '@/components/recruit/index'//招聘需求
 import Master from '@/components/master/index' //企业师傅库
+
 import Position from '@/components/position/index'//职位
+import Description from '@/components/description/index'//职位描述
+import System from '@/components/system/index'//课程体系
 Vue.use(Router)
 let router = new Router({
   routes: [{
@@ -79,9 +82,22 @@ let router = new Router({
       path: '/position',
       name: 'Position',
       component: Position,
+      redirect:'/description',
       meta: {
         auth: true
-      }
+      },
+      children: [
+        {
+          path: '/description',
+          name: 'Description',
+          component: Description
+        },
+        {
+          path: '/system',
+          name: 'System',
+          component: System
+        }
+      ]
     },
     {
       path: '/school',

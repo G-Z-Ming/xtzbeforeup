@@ -12,4 +12,6 @@
     </ColumnTab>
   </nav>
   <!-- 导航栏结束 -->
+
+  <router-view></router-view>
 </div>
