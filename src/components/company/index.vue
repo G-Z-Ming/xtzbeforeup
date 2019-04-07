@@ -13,7 +13,7 @@ export default {
   data () {
     return {
       // 行业类型开始
-      typeIndustryTitle: '公司类型',
+      typeIndustryTitle: '行业类型',
       typeIndustry: [
         {baseName: '全部', id: ''}
       ],
@@ -21,12 +21,20 @@ export default {
       // 行业类型结束
 
       // 地区开始
-      typeaddTitle: '<i style="margin-right: 32px;">地</i>区',
+      typeaddTitle: '<i style="margin-right: 32px;">地</i>址',
       typeAdd: [
         {baseName: '全部', id: ''}
       ],
       areaId: '',
       // 地区结束
+      recruitTitle: '招聘需求',
+      recruit: [
+        {baseName: '全部', id: ''}
+      ],
+      recruitId: '',
+      // 招聘需求开始
+
+      //招聘需求结束
 
       // 排序
       latest: true,
@@ -65,6 +73,9 @@ export default {
     industryId(){
       this.initData()
     },
+    recruitId(){
+      this.initData()
+    },
     certification(){
       this.initData()
     }
@@ -87,6 +98,13 @@ export default {
      */
     typeAddItemClick(item){
       this.areaId = item.id
+    },
+    /**
+     * 招聘需求点击事件
+     * @param item type: object
+     */
+    recruitItemClick(item){
+      this.recruitId = item.id
     },
     /**
      * 分页器跳转事件
@@ -145,7 +163,7 @@ export default {
      * 初始化企业列表
      */
     initData(){
-      const {latest, pageNum, pageSize, industryId, areaId, schoolName, certification} = this;
+      const {latest, pageNum, pageSize, industryId, areaId, schoolName, certification, recruitId} = this;
       this.$ajax.get('xtz/portal/enterprises', { params: { certification, latest, pageNum, pageSize, industryId, areaId, schoolName} }).then(rsp => {
         this.enterLIST = rsp.data.data.map(item=>{
           let arr = [];

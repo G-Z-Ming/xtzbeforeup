@@ -3,38 +3,40 @@
     <nav>
       <span>招聘需求：</span>
       <ul class="Navigation">
-        <li v-for="(item, index) in navName" :key="index">{{item.name}}</li>
+        <li
+          v-for="(item, index) in navName"
+          :key="index"
+          @click.prevent="changeJobType(index)"
+          :class="{active: typeIndex === index}"
+        >
+          {{item.name}}
+        </li>
       </ul>
     </nav>
  <!-- 招聘类型结束 -->
 
  <!-- 搜索栏开始-->
   <div class="search">
-  
+    <!-- 搜索框和排序开始 -->
+    <SearchTab
+      :searchPlaceholder="'搜索职位名称'"
+      :isShowIdentify="false"
+      :latest="latest"
+      @handleOrder="handleOrder"
+      @handleSearchName="handleJobName"
+    >
+    </SearchTab>
+    <!-- 搜索框和排序结束 -->
   </div>
  <!-- 搜索栏结束 -->
 
  <!-- 列表开始 -->
  <div class="recruitList">
     <ul class="boss">
-      <li @click="jump()">
-        <div class="sonOne">
-          <span>零售店员</span>
-          <span class="wages">5K</span>
-        </div>
-        <div class="sonTwe">
-            <span>学徒招聘</span>
-            <span>招100人</span>
-        </div>
-        <div class="sonThree">
-           <div class="grandSon-Lft">
-             <img src="" alt="">
-           </div>
-           <div class="grandSon-Rit">
-              <div class="grandsonTop">公司灌篮高手公共</div>
-              <div class="grandsonBot">企业规模：<span>1000</span></div>
-           </div>
-        </div>
+      <li @click.prevent="jumpTo">
+        <jobComponent>
+
+        </jobComponent>
       </li>
     </ul>
  </div>

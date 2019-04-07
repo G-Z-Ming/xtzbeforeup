@@ -1,0 +1,19 @@
+<div class="jobComponent">
+  <div class="sonOne">
+    <span>零售店员</span>
+    <span class="wages">5K</span>
+  </div>
+  <div class="sonTwe">
+    <span>学徒招聘</span>
+    <span>招100人</span>
+  </div>
+  <div class="sonThree">
+    <div class="grandSon-Lft">
+      <img src="" alt="">
+    </div>
+    <div class="grandSon-Rit">
+      <div class="grandsonTop">公司灌篮高手公共</div>
+      <div class="grandsonBot">企业规模：<span>1000</span></div>
+    </div>
+  </div>
+</div>

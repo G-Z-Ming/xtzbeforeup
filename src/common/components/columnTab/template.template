@@ -1,0 +1,10 @@
+<ul class="columnTab">
+  <li
+    :class="{sign:index===signIdex}"
+    v-for="(item,index) in navigationTabs"
+    :key="index"
+    @click="tabClick(index,item)"
+  >
+    {{item.name}}
+  </li>
+</ul>

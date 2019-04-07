@@ -11,16 +11,11 @@
 
   <!-- 导航栏开始 -->
   <nav class="container">
-    <ul class="nav-name">
-      <li
-        :class="{sign:index===signIdex}"
-        v-for="(item,index) in Navigation"
-        :key="index"
-        @click="HereClick(index,item)"
-      >
-        {{item.name}}
-      </li>
-    </ul>
+    <ColumnTab
+      :navigationTabs="navigationTabs"
+      @itemClick="HereClick"
+    >
+    </ColumnTab>
   </nav>
 
   <!-- 导航栏结束 -->
