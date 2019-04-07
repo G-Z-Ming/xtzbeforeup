@@ -1,6 +1,7 @@
 <script>
   import template from './template.template';
   import masterItem from '@/common/components/masterItem/index';
+  import $ from 'jquery';
 
   export default {
     name: 'master',
@@ -25,6 +26,10 @@
     template,
     created() {
       this.initData()
+    },
+    mounted() {
+      $(".items li", ".header ").eq(1).siblings().removeClass('active');
+      $(".items li", ".header ").eq(1).addClass('active');
     },
     methods: {
       /**

@@ -1,4 +1,5 @@
 <script>
+  import $ from 'jquery';
   import template from './template.template';
   import AreaSelection from '../../common/components/areaSelection/index';
   import SearchTab from '@/common/components/searchTab/index';
@@ -119,6 +120,10 @@
     created(){
       //  初始化数据
       this.initData()
+    },
+    mounted() {
+      $(".items li", ".header ").eq(2).siblings().removeClass('active');
+      $(".items li", ".header ").eq(2).addClass('active');
     }
   }
 </script>

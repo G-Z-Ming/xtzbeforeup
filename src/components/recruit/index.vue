@@ -2,6 +2,7 @@
   import template from './template.template';
   import SearchTab from '@/common/components/searchTab/index';
   import jobComponent from '@/common/components/jobComponent/index';
+  import $ from 'jquery';
 
   export default {
     name: 'recruit',
@@ -18,12 +19,16 @@
         jobName: '',                    // 搜索的职位名称
       }
     },
-    components:{
+    components: {
       SearchTab,
       jobComponent
     },
     template,
     created() {
+    },
+    mounted() {
+      $(".items li", ".header ").eq(1).siblings().removeClass('active');
+      $(".items li", ".header ").eq(1).addClass('active');
     },
     methods: {
       // 点击单独的跳转到详情页
@@ -39,21 +44,21 @@
        * 改变工作类型
        * @param index
        */
-      changeJobType(index){
+      changeJobType(index) {
         this.typeIndex = index;
       },
       /**
        * 选择排序规则
        * @param flag  排序规则
        */
-      handleOrder(flag){
+      handleOrder(flag) {
         this.latest = flag;
       },
       /**
        * 筛选学校名称
        * @param name  排序名称
        */
-      handleJobName(name){
+      handleJobName(name) {
         this.jobName = name;
       }
     }

@@ -2,6 +2,7 @@
   import template from "./template.template";
   import ColumnTab from '@/common/components/columnTab/index';
   import JobCommonHeader from '@/common/components/jobCommonHeader/index';
+  import $ from 'jquery';
 
   export default {
     name: "position",
@@ -22,6 +23,10 @@
       JobCommonHeader
     },
     created() {
+    },
+    mounted() {
+      $(".items li", ".header ").eq(1).siblings().removeClass('active');
+      $(".items li", ".header ").eq(1).addClass('active');
     },
     methods: {
       HereClick(item) {

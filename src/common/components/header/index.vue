@@ -4,7 +4,6 @@ export default {
   name: "CommonHeader",
   data () {
     return {
-      current: 0,
       roudata: [
         { name: "首页", goto: "/home" },
         { name: "企业", goto: "/company" },
@@ -24,7 +23,6 @@ export default {
       this.$router.push({
         path: item.goto
       });
-      this.current = index;
     },
     gotoLogin(){
       this.$router.push({

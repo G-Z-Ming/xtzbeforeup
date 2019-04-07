@@ -1,4 +1,5 @@
 <script>
+  import $ from 'jquery';
 import template from './template.template';
 export default {
   name: "home",
@@ -79,9 +80,12 @@ export default {
     },
   },
   created () {
-    
     // 调用初始化数据方法
     this.init();
+  },
+  mounted() {
+    $(".items li", ".header ").eq(0).siblings().removeClass('active');
+    $(".items li", ".header ").eq(0).addClass('active');
   }
 }
 </script>

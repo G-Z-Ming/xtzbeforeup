@@ -1,4 +1,5 @@
 <script>
+  import $ from 'jquery';
   import template from './template.template';
   import IntroduceHeader from '@/common/components/introduceHeader/index';
   import ColumnTab from '@/common/components/columnTab/index';
@@ -37,6 +38,10 @@
       this.$ajax.get('/xtz/portal/enterprise',{params:{nterpriseeId: this.$route.query.id}}).then(rsp=>{
         this.infoData = rsp.data.data;
       });
+    },
+    mounted() {
+      $(".items li", ".header ").eq(1).siblings().removeClass('active');
+      $(".items li", ".header ").eq(1).addClass('active');
     }
   }
 </script>
