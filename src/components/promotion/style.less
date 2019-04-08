@@ -1,0 +1,35 @@
+.promotion{
+    padding: 30px;
+    .program{
+        display: flex;
+        flex-wrap: wrap;
+        .step{
+            font-size: 20px;
+           display: flex;
+            color: #8a8a8a;
+            .ptn{
+                width: 156px;
+                height: 76px;
+                background-color: #f1f1f1;
+                border-radius: 16px;
+                line-height: 76px;
+                text-align: center;
+            }
+            .selection{
+                background-color: #377eff;
+                color: #fffcff;
+            }
+            .imgs{
+                background: url(../../img/Instructions.png) 10px 20px no-repeat;
+                width: 52px;
+                height: 76px;
+            }
+        }
+        >.step:last-child{
+            .imgs{
+                width: 0;
+            }
+        }
+        
+    }
+}

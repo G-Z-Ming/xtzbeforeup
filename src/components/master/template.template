@@ -1,7 +1,7 @@
 <div class="master container">
   <!-- 企业师傅列表开始 -->
   <ul class="masterList">
-    <li v-for="(item, index) in infoData" :key="index">
+    <li v-for="(item, index) in infoData" :key="index" @click="tutorials()">
       <masterItem
         :itemData="item"
       >

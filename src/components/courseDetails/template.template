@@ -1,0 +1,67 @@
+<div class="courseDetails">
+  <!-- 头部开始 -->
+  <div class="head">
+      <div class="scale container">
+          <div class="position-Lft">
+            <div class="worker">
+              <div class="worker-lft">专业名称</div>
+              <div class="price">
+                市场营销学徒制
+              </div>
+            </div>
+            <div class="HY">
+              学年:<span>3</span>
+              <div></div>
+              课程单元：<span>48</span>
+            </div>
+          </div>
+          <div class="position-Rit">
+            <div class="companys">
+              <div class="worker">
+                <div class="worker-lft">公司名字</div>
+              </div>
+            </div>
+            <div class="tu">
+              <img src="" alt="">
+            </div>
+          </div>
+        </div>
+  </div>
+ 
+  <!-- 头部结束 -->
+
+  <!-- 内容开始 -->
+  <div class="CDstart container">
+    <!-- 企业简介开始 -->
+    <div class="introduction">
+      <i>专业与招生介绍</i>
+      <div class="word">
+        55555
+      </div>
+    </div>
+    <!-- 企业简介结束 -->
+
+
+    <!-- 公司地址开始 -->
+    <div class="address">
+      <i>课程介绍</i>
+      <ul class="summary">
+        <li class="curriculumList">
+          <div class="curriculumHead">
+            一 市场营销课程
+          </div>
+          <div class="curriculumnav">
+            ruguodnfnfv你看女不女GV而后能供热v哦那的加班加点很关键的肯呢个号结构化可靠的Hi好个背景返回
+          </div>
+
+        </li>
+      </ul>
+
+
+    </div>
+  
+  </div>
+
+
+  <!-- 内容结束 -->
+</div>

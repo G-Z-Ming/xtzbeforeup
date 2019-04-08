@@ -1,16 +1,14 @@
 <script>
 import template from "./template.template";
 export default {
-  name: "system",
+  name: "tutordetails",
   data() {
     return {
     };
   },
   template,
   methods: {
-    details(){
-      this.$router.push({path:'/courseDetails'})
-    }
+    
   }
 };
 </script>

@@ -1,7 +1,7 @@
 <div class="system container">
   <!-- 课程体系列表开始 -->
   <ul class="courseList">
-    <li class="subjects">
+    <li class="subjects" @click="details()">
         <div class="subjects-one">
           <div class="category">市场营销学徒制</div>
           <div class="college">广州XXXX学院</div>
