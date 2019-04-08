@@ -75,7 +75,7 @@ export default {
     },
     gotoNews(){
       this.$router.push({
-        path: "/home/news"
+        path: "/news"
       });
     },
   },

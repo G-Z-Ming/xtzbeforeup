@@ -9,10 +9,11 @@ import NewsInfo from '@/components/newsinfo/index' //新闻内容
 import Identification from '@/components/identification/index' // 认证
 import Introduce from '@/components/introduce/index' //企业公司
 import Detailed from '@/components/detailed/index' //企业介绍
-import Recruit from '@/components/recruit/index'//招聘需求
+import Recruit from '@/components/recruit/index' //招聘需求
 import Master from '@/components/master/index' //企业师傅库
 import TutorDetails from '@/components/tutorDetails/index'//企业师傅库详情
 
+<<<<<<< HEAD
 import Position from '@/components/position/index'//职位
 import Description from '@/components/description/index'//职位描述
 import System from '@/components/system/index'//课程体系
@@ -136,8 +137,101 @@ let router = new Router({
       auth: true
     }
   }
+=======
+import Position from '@/components/position/index' //职位
+import Description from '@/components/description/index' //职位描述
+import System from '@/components/system/index' //课程体系
+Vue.use(Router)
+let router = new Router({
+    routes: [{
+            path: '/',
+            redirect: 'Home'
+        },
+        {
+            path: '/login',
+            name: 'Login',
+            component: Login,
+        },
+        {
+            path: '/home',
+            name: 'Home',
+            component: Home,
+            meta: {
+                auth: true
+            },
+            // redirect: '/home/news',
+            children: [{
+                path: '/news',
+                name: 'News',
+                component: News,
+            }, ],
+        },
+        {
+            path: '/company',
+            name: 'Company',
+            component: Company
+        },
+        {
+            path: '/introduce',
+            name: 'Introduce',
+            component: Introduce,
+            redirect: '/detailed',
+            children: [{
+                    path: '/detailed',
+                    name: 'Detailed',
+                    component: Detailed
+                },
+                {
+                    path: '/recruit',
+                    name: 'Recruit',
+                    component: Recruit
+                },
+                {
+                    path: '/master',
+                    name: 'Master',
+                    component: Master
+                }
+            ]
+        },
+        {
+            path: '/position',
+            name: 'Position',
+            component: Position,
+            redirect: '/description',
+            meta: {
+                auth: true
+            },
+            children: [{
+                    path: '/description',
+                    name: 'Description',
+                    component: Description
+                },
+                {
+                    path: '/system',
+                    name: 'System',
+                    component: System
+                }
+            ]
+        },
+        {
+            path: '/school',
+            name: 'School',
+            component: School,
+            meta: {
+                auth: true
+            }
+        },
+        {
+            path: '/identification',
+            name: 'Identification',
+            component: Identification,
+            meta: {
+                auth: true
+            }
+        }
+>>>>>>> a719bde06e85a813ba8f8e0204a268c876bf21c2
 
-  ]
+    ]
 })
 
 /*router.beforeEach((to, from, next) => {
