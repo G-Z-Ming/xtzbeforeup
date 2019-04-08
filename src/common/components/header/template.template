@@ -30,7 +30,4 @@
       <!-- 登陆按钮 结束 -->
     </div>
   </div>
-
-  <router-view></router-view>
-
 </div>

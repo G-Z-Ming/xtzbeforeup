@@ -29,21 +29,21 @@
         ],
         areaId: '',
         // 地区结束
+
+        // 招聘需求开始
         recruitTitle: '招聘需求',
         recruit: [
           {baseName: '全部', id: ''}
         ],
         recruitId: '',
-        // 招聘需求开始
-
         //招聘需求结束
 
         // 排序
         latest: true,
-        // 学校名称
+        // 公司名称
         schoolName: '',
-        // 列表
-        enterLIST: [],
+        // 公司列表
+        enterList: [],
 
         // 分页器开始
         pageSize: 6,    // 一个页面多少个
@@ -86,7 +86,7 @@
       // 调用初始化
       this.init()
     },
-    mounted() {
+    beforeMount() {
       $(".items li", ".header ").eq(1).siblings().removeClass('active');
       $(".items li", ".header ").eq(1).addClass('active');
     },
@@ -169,7 +169,8 @@
        * 初始化企业列表
        */
       initData() {
-        const {latest, pageNum, pageSize, industryId, areaId, schoolName, certification, recruitId} = this;
+        const that = this;
+        const {latest, pageNum, pageSize, industryId, areaId, schoolName, certification, recruitId} = that;
         this.$ajax.get('xtz/portal/enterprises', {
           params: {
             certification,
@@ -178,19 +179,23 @@
             pageSize,
             industryId,
             areaId,
-            schoolName
+            enterpriseName: schoolName
           }
         }).then(rsp => {
-          this.enterLIST = rsp.data.data.map(item => {
-            let arr = [];
-            arr.push({name: '学徒岗位', count: item.xtTutorCount});
-            arr.push({name: '企业师傅', count: item.xtSpecialtyCount});
-            arr.push({name: '企业规模', count: item.businessScale});
-            item.descriptionList = arr;
-            item.introduction = item.introduce;
-            return item
-          });
-          this.totalCount = rsp.data.totals;
+          if(rsp.data.data.length>0){
+            that.enterList = rsp.data.data.map(item => {
+              let arr = [];
+              arr.push({name: '学徒岗位', count: item.xtTutorCount});
+              arr.push({name: '企业师傅', count: item.xtSpecialtyCount});
+              arr.push({name: '企业规模', count: item.businessScale});
+              item.descriptionList = arr;
+              item.introduction = item.introduce;
+              return item
+            });
+          }else{
+            that.enterList = [];
+          }
+          that.totalCount = rsp.data.totals;
         });
       }
     }

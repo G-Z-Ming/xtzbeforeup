@@ -59,7 +59,7 @@
     <div class="schoolList">
       <div
         class="item"
-        v-for="(item,index) in enterLIST"
+        v-for="(item,index) in enterList"
         :key="index"
         @click.prevent="changeToRoute(item.id)"
       >

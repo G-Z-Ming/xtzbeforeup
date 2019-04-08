@@ -24,14 +24,16 @@
             <!-- 地区结束 -->
           </div>
           <!-- 搜索框和排序开始 -->
-          <SearchTab
-            :searchPlaceholder="'搜索学校名称'"
-            :isShowIdentify="false"
-            :latest="latest"
-            @handleOrder="handleOrder"
-            @handleSearchName="handleSearchName"
-          >
-          </SearchTab>
+          <div class="search">
+            <SearchTab
+              :searchPlaceholder="'搜索学校名称'"
+              :isShowIdentify="false"
+              :latest="latest"
+              @handleOrder="handleOrder"
+              @handleSearchName="handleSearchName"
+            >
+            </SearchTab>
+          </div>
           <!-- 搜索框和排序结束 -->
         </div>
       </div>

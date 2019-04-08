@@ -11,9 +11,7 @@
     },
     template,
     methods:{
-      itemClick(){
 
-      }
     },
 
   }

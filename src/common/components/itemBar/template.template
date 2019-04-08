@@ -1,4 +1,4 @@
-<div class="itemBar" @click="itemClick(item.id)">
+<div class="itemBar" v-if="!item.reset">
   <div class="itemShadowBox">
     <div class="LS-Top">
       <div>
