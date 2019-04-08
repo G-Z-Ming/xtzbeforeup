@@ -1,8 +1,8 @@
 <div class="masterItem">
-  <div class="head"><img src="" alt=""></div>
+  <div class="head"><img :src="itemData.logopic" alt=""></div>
   <div class="words">
-    <div class="master-Name">名字</div>
-    <div class="department">部门：<span>技术部</span></div>
-    <div class="department">岗位：<span>店长</span></div>
+    <div class="master-Name">{{itemData.tutorname}}</div>
+    <div class="department">部门：<span>{{itemData.department}}</span></div>
+    <div class="department">岗位：<span>{{itemData.job}}</span></div>
   </div>
 </div>

@@ -113,7 +113,7 @@
             item.name = item.schoolname;
             return item
           });
-          this.totalCount = rsp.data.totals;
+          this.totalCount = +rsp.data.totals;
         })
       }
     },

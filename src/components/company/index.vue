@@ -195,7 +195,7 @@
           }else{
             that.enterList = [];
           }
-          that.totalCount = rsp.data.totals;
+          that.totalCount = +rsp.data.totals;
         });
       }
     }

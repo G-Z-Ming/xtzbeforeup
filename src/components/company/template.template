@@ -67,7 +67,7 @@
       </div>
       <!-- 学校列表结束 -->
     </div>
-    <div class="block" v-if="totalCount > 6">
+    <div class="block" v-if="totalCount > 5">
       <el-pagination
         @current-change="handleCurrentChange"
         @prev-click="handleCurrentChange"

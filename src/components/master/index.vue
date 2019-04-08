@@ -51,14 +51,19 @@ export default {
           pageNum
         }
       }).then(rsp => {
-        
         this.infoData = rsp.data.data;
+        this.totalCount = +rsp.data.totals;
       });
     },
 
     // 点击师傅跳转详情页
-    tutorials () {
-      this.$router.push({ path: '/tutorDetails' })
+    tutorials (id) {
+      this.$router.push({
+        path: '/tutorDetails',
+        query:{
+            id
+        }
+      })
     }
   }
 }

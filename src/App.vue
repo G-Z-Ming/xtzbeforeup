@@ -3,7 +3,7 @@
     <el-container class="is-vertical">
       <CommonHeader></CommonHeader>
       <transition  name="fade">
-        <router-view  class="mainWarp"></router-view>
+        <router-view></router-view>
       </transition>
       <CommonFooter></CommonFooter>
     </el-container>

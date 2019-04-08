@@ -75,7 +75,10 @@ export default {
     },
     gotoNews(){
       this.$router.push({
-        path: "/news"
+        path: "/home/news",
+        query:{
+          typeDId: this.newsActiveIndex+1
+        }
       });
     },
   },

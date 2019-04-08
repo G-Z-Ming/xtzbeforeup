@@ -254,14 +254,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-.mainWarp{
-  position: absolute;
-  width: 100%;
-  padding:0;
-  top: 80px;
-  left: 0;
-}
-
 .fade-enter-active, .fade-leave-active {
   transition: opacity .5s;
 }

@@ -1,12 +1,12 @@
 <div class="container tutorDetails">
     <!-- /中间的头像名字岗位 -->
     <div class="middle">
-        <div class="portrait"><img src="" alt=""></div>
-        <div class="bossName">师傅名字</div>
-          <div class="bossWork">
-            <div class="department">部门：<span>门市部</span></div>
-            <div></div>
-            <div class="bosspost">岗位：<span>店长</span></div>
+        <div class="portrait"><img :src="infoData.logopic" alt=""></div>
+        <div class="bossName">{{infoData.tutorname}}</div>
+          <div class="bossWork clearfix">
+            <span class="department fl">部门：<i>{{infoData.department}}</i></span>
+            <span class="border fl"></span>
+            <span class="bosspost fl">岗位：<i>{{infoData.job}}</i></span>
         </div>
     </div>
      <!-- /中间的头像名字岗位结束 -->
@@ -15,7 +15,7 @@
      <div class="bossIntroduce">
          <i>导师介绍</i>
          <div class="written">
-             导师 导师 导师 导师 导师 导师 导师 导师 导师 导师 导师 导师 导师 导师 导师 导师 导师 导师 导师 导师 导师
+             {{infoData.introduction}}
          </div>
      </div>
      <!-- 导师介绍结束 -->
