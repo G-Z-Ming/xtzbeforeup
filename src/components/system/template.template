@@ -1,0 +1,17 @@
+<div class="system container">
+  <!-- 课程体系列表开始 -->
+  <ul class="courseList">
+    <li class="subjects">
+        <div class="subjects-one">
+          <div class="category">市场营销学徒制</div>
+          <div class="college">广州XXXX学院</div>
+        </div>
+        <div class="subjects-two">
+            <div class="year">学年：<span>111</span></div>
+            <div class="dv"></div>
+            <div class="unit">课程单元：<span>22</span></div>
+        </div>
+    </li>
+  </ul>
+  <!-- 课程体系列表结束 -->
+</div>
