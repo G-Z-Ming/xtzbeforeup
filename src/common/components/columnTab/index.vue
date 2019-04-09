@@ -3,7 +3,7 @@
   export default {
     data(){
       return {
-        signIdex: 0
+
       }
     },
     template,
@@ -13,7 +13,6 @@
     methods:{
       // 点击每一个导航
       tabClick(index,item){
-        this.signIdex = index;
         this.$emit('itemClick', item);
       }
     }

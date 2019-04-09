@@ -27,8 +27,8 @@
     created() {
     },
     mounted() {
-      $(".items li", ".header ").eq(1).siblings().removeClass('active');
-      $(".items li", ".header ").eq(1).addClass('active');
+      $("li", ".columnTab ").eq(1).siblings().removeClass('sign');
+      $("li", ".columnTab ").eq(1).addClass('sign');
     },
     methods: {
       // 点击单独的跳转到详情页

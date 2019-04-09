@@ -18,8 +18,8 @@
       });
     },
     mounted() {
-      $(".items li", ".header ").eq(1).siblings().removeClass('active');
-      $(".items li", ".header ").eq(1).addClass('active');
+      $("li", ".columnTab ").eq(0).siblings().removeClass('sign');
+      $("li", ".columnTab ").eq(0).addClass('sign');
     },
     methods: {}
   }

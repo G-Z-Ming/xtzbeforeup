@@ -28,8 +28,8 @@ export default {
     this.initData()
   },
   mounted () {
-    $(".items li", ".header ").eq(1).siblings().removeClass('active');
-    $(".items li", ".header ").eq(1).addClass('active');
+    $("li", ".columnTab ").eq(2).siblings().removeClass('sign');
+    $("li", ".columnTab ").eq(2).addClass('sign');
   },
   methods: {
     /**
