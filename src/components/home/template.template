@@ -20,7 +20,9 @@
                     <div class="newsColumn">
                         <div class="newsTitle clearfix">
                             <ul class="info fl" v-if="newHeaders.length > 0">
-                                <li class="fl" v-for="(item, index) in newHeaders" :key="index" :class="{active: index === newsActiveIndex}" @click.prevent="exchangeNews(item.id, index)">
+                                <li class="fl" v-for="(item, index) in newHeaders" :key="index"
+                                    :class="{active: index === newsActiveIndex}"
+                                    @click.prevent="exchangeNews(item.id, index)">
                                     {{item.baseDName}}
                                 </li>
                             </ul>
@@ -28,7 +30,8 @@
                         </div>
                         <div class="newsContent">
                             <ul class="articleContent" v-if="newsDataList.length > 0">
-                                <li v-for="(item, index) in newsDataList" :key="index" @click.prevent="gotoNewsInfo(item.id)">
+                                <li v-for="(item, index) in newsDataList" :key="index"
+                                    @click.prevent="gotoNewsInfo(item.id)">
                                     <div class="article clearfix">
                                         <i class="fl">{{item.informationName}}</i>
                                         <span class="fr">[<em class="date">{{item.createtime}}</em>]</span>
@@ -55,7 +58,7 @@
                     <div class="SZ-upper">
                         <div>师资培训</div>
                         <ul class="SZ-list" v-if="teachersList.length > 0">
-                            <li v-for="(item,index) in teachersList" :key="index">
+                            <li v-for="(item,index) in teachersList" :key="index" @click.prevent="gotoNewsInfo(item.id)">
                                 <div>
                                     <div>{{index+1}}</div>
                                 </div>
@@ -70,7 +73,7 @@
                         </ul>
 
                     </div>
-                    <a href="#" target="_blank" class="SZ-lower">查看更多></a>
+                    <a href="#" target="_blank" class="SZ-lower" @click.prevent="gotoTeachers(7)">查看更多></a>
                 </div>
                 <!-- 师资培训结束 -->
 
@@ -101,7 +104,7 @@
                             <!-- 横排第三张结束 -->
                         </div>
                     </div>
-                    <a href="#" target="_blank" class="CI-lower">查看更多</a>
+                    <a href="#" target="_blank" class="CI-lower" @click.prevent="gotoTeachers(8)">查看更多</a>
                 </div>
                 <!-- 技能竞赛结束 -->
             </div>

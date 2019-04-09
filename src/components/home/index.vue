@@ -85,7 +85,14 @@ export default {
       this.$router.push({
         path:"/home/news/newsinfo",
         query:{id}
-      })
+      });
+    },
+    // 点击跳转到师资和技能竞赛
+    gotoTeachers(id){
+      this.$router.push({
+        path:"/home/trainings",
+        query:{id}
+      });
     }
   },
   created () {
