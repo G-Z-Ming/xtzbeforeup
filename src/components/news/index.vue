@@ -16,19 +16,31 @@ export default {
   },
   template,
   created(){
+    this.initId();
     this.init();
   },
   watch:{
     pageNum(){
       this.init()
+    },
+    activeId(){
+      this.init()
     }
   },
   methods: {
-    init(){
+    /**
+     * 初始化activeId
+     **/
+    initId(){
       const {typeDId} = this.$route.query;
-      const {pageNum, pageSize} = this;
       this.activeId = typeDId;
-      this.$ajax.get('xtz/portal/informations',{params:{pageNum, pageSize, typeDId, typeId: '5'}}).then(rsp=>{
+    },
+    /**
+     * 初始化数据
+     **/
+    init(){
+      const {pageNum, pageSize} = this;
+      this.$ajax.get('xtz/portal/informations',{params:{pageNum, pageSize, typeDId: this.activeId, typeId: '5'}}).then(rsp=>{
         // let rspData = rsp.data;
         // console.log(rspData.data);
         this.newsListData = rsp.data.data.map(item=>{
@@ -59,6 +71,13 @@ export default {
     handleCurrentChange(num){
       this.pageNum = num;
     },
+    /**
+     * 改变当前activeId
+     * @param id
+     */
+    changeActiveId(id){
+      this.activeId = id;
+    }
   }
 };
 </script>
