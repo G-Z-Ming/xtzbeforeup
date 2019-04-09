@@ -1,50 +1,44 @@
 <div class="news">
-  <div class="zm-wrap">
-    <div class="news-header">
-      <i class="el-icon-location"></i>
-      <span class="head-title">新闻报道：</span>
-      <el-breadcrumb separator-class="el-icon-arrow-right">
-        <el-breadcrumb-item :to="{ path: '/' }">全部</el-breadcrumb-item>
-        <el-breadcrumb-item v-if="activeId === 1">企业重大事项</el-breadcrumb-item>
-        <el-breadcrumb-item v-if="activeId === 2">学校重大事项</el-breadcrumb-item>
-      </el-breadcrumb>
-    </div>
-    <div class="news-bodyer">
-      <div class="body-content">
-        <div class="content-wrap" v-for="(item,index) in newsListData" :key="index" @click.prevent="gotoNewsInfo(item.id)">
-          <el-container>
-            <el-aside width="186px">
-              <img v-bind:src="item.picName" alt="">
-            </el-aside>
-            <el-main>
-              <div class="content-main-title">
-                <p class="zm-title-text">{{item.informationName}}</p>
-              </div>
-              <div class="content-main-body">
-                <!-- <p class="zm-body-text" >{{item.content1}}</p> -->
-                <div class="zm-body-text" v-html="item.content1">{{item.content1}}</div>
-              </div>
-              <div class="content-main-date">
-                <i class="el-icon-time"></i>
-                <p class="zm-date-text">{{item.createtime}}</p>
-              </div>
-            </el-main>
-          </el-container>
+    <div class="zm-wrap">
+        <div class="news-header">
+            <div class="header-message">
+                <i class="el-icon-location"></i>
+                <span class="head-title">新闻报道：</span>
+                <el-breadcrumb separator-class="el-icon-arrow-right">
+                    <el-breadcrumb-item :to="{ path: '/' }">全部</el-breadcrumb-item>
+                    <el-breadcrumb-item v-if="activeId === 1">企业重大事项</el-breadcrumb-item>
+                    <el-breadcrumb-item v-if="activeId === 2">学校重大事项</el-breadcrumb-item>
+                </el-breadcrumb>
+            </div>
+            <div class="back-to-home" @click.prevent.stop="$router.push('/home')">返回》</div>
         </div>
-      </div>
+        <div class="news-bodyer">
+            <div class="body-content">
+                <div class="content-wrap" v-for="(item,index) in newsListData" :key="index" @click.prevent="gotoNewsInfo(item.id)">
+                    <el-container>
+                        <el-aside width="186px">
+                            <img v-bind:src="item.picName" alt="">
+                        </el-aside>
+                        <el-main>
+                            <div class="content-main-title">
+                                <p class="zm-title-text">{{item.informationName}}</p>
+                            </div>
+                            <div class="content-main-body">
+                                <!-- <p class="zm-body-text" >{{item.content1}}</p> -->
+                                <div class="zm-body-text" v-html="item.content1">{{item.content1}}</div>
+                            </div>
+                            <div class="content-main-date">
+                                <i class="el-icon-time"></i>
+                                <p class="zm-date-text">{{item.createtime}}</p>
+                            </div>
+                        </el-main>
+                    </el-container>
+                </div>
+            </div>
+        </div>
+        <div class="news-footer" v-if="totalCount > 3">
+            <el-pagination @current-change="handleCurrentChange" @prev-click="handleCurrentChange" @next-click="handleCurrentChange" :page-size="pageSize" layout="prev, pager, next, total, jumper" :pager-count="7" background :total="totalCount">
+            </el-pagination>
+        </div>
     </div>
-    <div class="news-footer" v-if="totalCount > 3">
-      <el-pagination
-        @current-change="handleCurrentChange"
-        @prev-click="handleCurrentChange"
-        @next-click="handleCurrentChange"
-        :page-size="pageSize"
-        layout="prev, pager, next, total, jumper"
-        :pager-count="7"
-        background
-        :total="totalCount"
-      >
-      </el-pagination>
-    </div>
-  </div>
 </div>
