@@ -1,7 +1,7 @@
 <div class="container tutorDetails">
     <!-- /中间的头像名字岗位 -->
     <div class="middle">
-        <div class="portrait"><img :src="infoData.logopic" alt=""></div>
+        <div class="portrait"><img :src="infoData.logopic" alt=""><div class="verification"></div>   </div>
         <div class="bossName">{{infoData.tutorname}}</div>
           <div class="bossWork clearfix">
             <span class="department fl">部门：<i>{{infoData.department}}</i></span>
