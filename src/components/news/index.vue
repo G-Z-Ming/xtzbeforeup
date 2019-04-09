@@ -46,9 +46,10 @@ export default {
     capitalize(value){
       return value.substring(0, 10)
     },
-    gotoNewsInfo(){
+    gotoNewsInfo(id){
       this.$router.push({
-        path: "/home/news/newsinfo"
+        path: "/home/news/newsinfo",
+        query:{id}
       });
     },
     /**
