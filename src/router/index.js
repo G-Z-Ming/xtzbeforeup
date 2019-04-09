@@ -11,130 +11,135 @@ import Introduce from '@/components/introduce/index' //企业公司
 import Detailed from '@/components/detailed/index' //企业介绍
 import Recruit from '@/components/recruit/index' //招聘需求
 import Master from '@/components/master/index' //企业师傅库
-import TutorDetails from '@/components/tutorDetails/index'//企业师傅库详情
-import Position from '@/components/position/index'//职位
-import Description from '@/components/description/index'//职位描述
-import System from '@/components/system/index'//课程体系
-import CourseDetails from '@/components/courseDetails/index'//课程体系详情
-import Promotion from '@/components/promotion/index'//学徒晋升
+import TutorDetails from '@/components/tutorDetails/index' //企业师傅库详情
+import Position from '@/components/position/index' //职位
+import Description from '@/components/description/index' //职位描述
+import System from '@/components/system/index' //课程体系
+import CourseDetails from '@/components/courseDetails/index' //课程体系详情
+import Promotion from '@/components/promotion/index' //学徒晋升
 Vue.use(Router)
 let router = new Router({
-  routes: [{
-    path: '/',
-    redirect: 'Home'
-  },
-  {
-    path: '/login',
-    name: 'Login',
-    component: Login,
-  },
-  {
-    path: '/home',
-    name: 'Home',
-    component: Home,
-    meta: {
-      auth: true
-    }
-  },
-  {
-    path: '/home/news',
-    name: 'News',
-    component: News,
-    meta: {
-      auth: true
-    }
-  },
-  {
-    path: '/home/news/newsinfo',
-    name: 'NewsInfo',
-    component: NewsInfo,
-    meta: {
-      auth: true
-    }
-  },
-  {
-    path: '/company',
-    name: 'Company',
-    component: Company
-  },
-  {
-    path: '/introduce',
-    name: 'Introduce',
-    component: Introduce,
-    redirect: '/detailed',
-    children: [
-      {
-        path: '/detailed',
-        name: 'Detailed',
-        component: Detailed
-      },
-      {
-        path: '/recruit',
-        name: 'Recruit',
-        component: Recruit
-      },
-      {
-        path: '/master',
-        name: 'Master',
-        component: Master
-      },
-      {
-        path: '/tutorDetails',
-        name: 'TutorDetails',
-        component: TutorDetails
-      }
-    ]
-  },
-  {
-    path: '/position',
-    name: 'Position',
-    component: Position,
-    redirect: '/description',
-    meta: {
-      auth: true
+    scrollBehavior(to, from, savedPosition) {
+        if (savedPosition) {
+            return savedPosition
+        } else {
+            return { x: 0, y: 0 }
+        }
     },
-    children: [
-      {
-        path: '/description',
-        name: 'Description',
-        component: Description
-      },
-      {
-        path: '/system',
-        name: 'System',
-        component: System
-      },
-      {
-        path: '/promotion',
-        name: 'Promotion',
-        component: Promotion
-      }
-    ]
-  },
-  {
-    path: '/courseDetails',
-    name: 'CourseDetails',
-    component: CourseDetails,
-    meta: {
-      auth: true
-    }
-  },
-  {
-    path: '/school',
-    name: 'School',
-    component: School,
-    meta: {
-      auth: true
-    }
-  },
-  {
-    path: '/identification',
-    name: 'Identification',
-    component: Identification,
-    meta: {
-      auth: true
-    }
-  }
+    routes: [{
+            path: '/',
+            redirect: 'Home'
+        },
+        {
+            path: '/login',
+            name: 'Login',
+            component: Login,
+        },
+        {
+            path: '/home',
+            name: 'Home',
+            component: Home,
+            meta: {
+                auth: true
+            }
+        },
+        {
+            path: '/home/news',
+            name: 'News',
+            component: News,
+            meta: {
+                auth: true
+            }
+        },
+        {
+            path: '/home/news/newsinfo',
+            name: 'NewsInfo',
+            component: NewsInfo,
+            meta: {
+                auth: true
+            }
+        },
+        {
+            path: '/company',
+            name: 'Company',
+            component: Company
+        },
+        {
+            path: '/introduce',
+            name: 'Introduce',
+            component: Introduce,
+            redirect: '/detailed',
+            children: [{
+                    path: '/detailed',
+                    name: 'Detailed',
+                    component: Detailed
+                },
+                {
+                    path: '/recruit',
+                    name: 'Recruit',
+                    component: Recruit
+                },
+                {
+                    path: '/master',
+                    name: 'Master',
+                    component: Master
+                },
+                {
+                    path: '/tutorDetails',
+                    name: 'TutorDetails',
+                    component: TutorDetails
+                }
+            ]
+        },
+        {
+            path: '/position',
+            name: 'Position',
+            component: Position,
+            redirect: '/description',
+            meta: {
+                auth: true
+            },
+            children: [{
+                    path: '/description',
+                    name: 'Description',
+                    component: Description
+                },
+                {
+                    path: '/system',
+                    name: 'System',
+                    component: System
+                },
+                {
+                    path: '/promotion',
+                    name: 'Promotion',
+                    component: Promotion
+                }
+            ]
+        },
+        {
+            path: '/courseDetails',
+            name: 'CourseDetails',
+            component: CourseDetails,
+            meta: {
+                auth: true
+            }
+        },
+        {
+            path: '/school',
+            name: 'School',
+            component: School,
+            meta: {
+                auth: true
+            }
+        },
+        {
+            path: '/identification',
+            name: 'Identification',
+            component: Identification,
+            meta: {
+                auth: true
+            }
+        }
 
     ]
 })

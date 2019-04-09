@@ -81,6 +81,12 @@ export default {
         }
       });
     },
+    gotoNewsInfo(id){
+      this.$router.push({
+        path:"/home/news/newsinfo",
+        query:{id}
+      })
+    }
   },
   created () {
     // 调用初始化数据方法
