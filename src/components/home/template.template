@@ -58,7 +58,8 @@
                     <div class="SZ-upper">
                         <div>师资培训</div>
                         <ul class="SZ-list" v-if="teachersList.length > 0">
-                            <li v-for="(item,index) in teachersList" :key="index" @click.prevent="gotoNewsInfo(item.id)">
+                            <li v-for="(item,index) in teachersList" :key="index"
+                                @click.prevent="gotoNewsInfo(item.id)">
                                 <div>
                                     <div>{{index+1}}</div>
                                 </div>
@@ -95,16 +96,17 @@
                                     <!--<div>{{JNheadline[1].informationName}}</div>-->
                                 </div>
                                 <!-- 横排第二张结束 -->
+                                <!-- 横排第三张开始 -->
+                                <div>
+                                    <img src="../../img/place.png" alt="">
+                                    <!--<div>{{JNheadline[2].informationName}}</div>-->
+                                </div>
+                                <!-- 横排第三张结束 -->
                             </div>
-                            <!-- 横排第三张开始 -->
-                            <div>
-                                <img src="../../img/place.png" alt="">
-                                <!--<div>{{JNheadline[2].informationName}}</div>-->
-                            </div>
-                            <!-- 横排第三张结束 -->
+
                         </div>
                     </div>
-                    <a href="#" target="_blank" class="CI-lower" @click.prevent="gotoTeachers(8)">查看更多</a>
+                    <a href="#" target="_blank" class="CI-lower" @click.prevent="gotoskill(8)">查看更多</a>
                 </div>
                 <!-- 技能竞赛结束 -->
             </div>

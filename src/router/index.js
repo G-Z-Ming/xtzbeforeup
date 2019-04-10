@@ -7,6 +7,7 @@ import School from '@/components/school/index' //院校
 import News from '@/components/news/index' //新闻
 import NewsInfo from '@/components/newsinfo/index' //新闻内容
 import Trainings from '@/components/trainings/index'//师资新闻列表页
+import Skill from '@/components/skill/index'//技能竞赛新闻列表页
 import Identification from '@/components/identification/index' // 认证
 import Introduce from '@/components/introduce/index' //企业公司
 import Detailed from '@/components/detailed/index' //企业介绍
@@ -64,6 +65,14 @@ let router = new Router({
             path:'/home/trainings',
             name:'Trainings',
             component:Trainings,
+            meta: {
+                auth: true
+            }
+        },
+        {
+            path:'/home/skill',
+            name:'Skill',
+            component:Skill,
             meta: {
                 auth: true
             }
