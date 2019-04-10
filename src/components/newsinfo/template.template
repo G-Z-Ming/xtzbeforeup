@@ -1,20 +1,23 @@
 <div class="news-info">
     <div class="zm-wrap">
         <div class="newsinfo-header">
-            <i class="el-icon-location"></i>
-            <router-link to="/home">首页</router-link>
-            <el-breadcrumb separator-class="el-icon-arrow-right">
-                <el-breadcrumb-item>新闻报道</el-breadcrumb-item>
-                <el-breadcrumb-item>正文</el-breadcrumb-item>
-            </el-breadcrumb>
+            <div class="header-message">
+                <i class="el-icon-location"></i>
+                <router-link to="/home">首页</router-link>
+                <el-breadcrumb separator-class="el-icon-arrow-right">
+                    <el-breadcrumb-item>新闻报道</el-breadcrumb-item>
+                    <el-breadcrumb-item>正文</el-breadcrumb-item>
+                </el-breadcrumb>
+            </div>
+            <div class="back-to-upper" @click.prevent="prev">返回>></div>
         </div>
         <div class="newsinfo-bodyer">
             <div class="info-body-title">
                 <p class="info-title-text">{{newsInfo.informationName}}</p>
                 <p class="info-title-date">发布日期：【{{newsInfo.createtime}}】</p>
                 <div class="info-content-main">
-                  <!--<p v-html="newsInfo.content1"></p>-->
-                  <p v-html="newsInfo.content"></p>
+                    <!--<p v-html="newsInfo.content1"></p>-->
+                    <p v-html="newsInfo.content"></p>
                 </div>
             </div>
         </div>
