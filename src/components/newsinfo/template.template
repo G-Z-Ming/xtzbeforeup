@@ -3,7 +3,7 @@
         <div class="newsinfo-header">
             <div class="header-message">
                 <i class="el-icon-location"></i>
-                <router-link to="/home">首页</router-link>
+                <router-link to="/home">首页：</router-link>
                 <el-breadcrumb separator-class="el-icon-arrow-right">
                     <el-breadcrumb-item>新闻报道</el-breadcrumb-item>
                     <el-breadcrumb-item>正文</el-breadcrumb-item>

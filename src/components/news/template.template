@@ -8,7 +8,7 @@
                 <span class="tab" :class="{active: activeId === 1}" @click="changeActiveId(1)">企业重大事项</span>
                 <span class="tab" :class="{active: activeId === 2}" @click="changeActiveId(2)">学校重大事项</span>
             </div>
-            <div class="back-to-home" @click.prevent.stop="$router.push('/home')">返回》</div>
+            <div class="back-to-home" @click.prevent.stop="$router.push('/home')">返回>></div>
         </div>
         <div class="news-bodyer">
             <div class="body-content">
