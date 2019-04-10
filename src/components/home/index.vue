@@ -42,6 +42,8 @@ export default {
           return item;
         });
       });
+      
+
     },
     /** 时间过滤
      * @param value  type:string
@@ -87,12 +89,19 @@ export default {
         query:{id}
       });
     },
-    // 点击跳转到师资和技能竞赛
+    // 点击跳转到师资
     gotoTeachers(id){
       this.$router.push({
         path:"/home/trainings",
         query:{id}
       });
+    },
+    //点击跳转到技能培训
+    gotoskill(id){
+      this.$router.push({
+        path:"/home/skill",
+        query:{id}
+      })
     }
   },
   created () {
