@@ -25,6 +25,9 @@
         if (splitchar == "YY-MM-DD") {
           return y + "-" + m + "-" + d;
         }
+      },
+      prev(){
+        this.$router.go(-1)
       }
     },
     created() {
